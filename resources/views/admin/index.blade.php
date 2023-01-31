@@ -19,7 +19,6 @@
             <div class="app-container container-fluid d-flex align-items-stretch justify-content-between" id="kt_app_header_container">
                 <div class="d-flex align-items-center d-lg-none ms-n3 me-1 me-md-2" title="مشاهده sidebar menu">
                     <div class="btn btn-icon btn-active-color-primary w-35px h-35px" id="kt_app_sidebar_mobile_toggle">
-
                         <span class="svg-icon svg-icon-2 svg-icon-md-1">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +30,6 @@
                                               fill="currentColor"/>
 									</svg>
 								</span>
-
                     </div>
                 </div>
                 <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
@@ -80,66 +78,21 @@
 
                                     </div>
                                 </div>
-
                                 <div class="separator my-2"></div>
-
                                 <div class="menu-item px-5">
                                     <a href="#" class="menu-link px-5">پروفایل
                                         من</a>
                                 </div>
-
-                                <div class="menu-item px-5">
-                                    <a href="#" class="menu-link px-5">
-                                        <span class="menu-text">پروژه ها من</span>
-                                        <span class="menu-badge">
-													<span
-                                                        class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
-												</span>
-                                    </a>
-                                </div>
-
                                 <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                                      data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-
-                                    <div class="menu-sub menu-sub-dropdown w-175px py-4">
-
-                                        <div class="menu-item px-3">
-                                            <a href="#" class="menu-link px-5">مراجعات</a>
-                                        </div>
-
-                                        <div class="menu-item px-3">
-                                            <a href="#" class="menu-link px-5">صورتحساب</a>
-                                        </div>
-                                        <div class="menu-item px-3">
-                                            <a href="#" class="menu-link px-5">پرداخت
-                                                ها</a>
-                                        </div>
-                                        <div class="menu-item px-3">
-                                            <a href="#"
-                                               class="menu-link d-flex flex-stack px-5">بیانه ها
-                                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
-                                                   title="نمایش your statements"></i></a>
-                                        </div>
-                                        <div class="separator my-2"></div>
-                                        <div class="menu-item px-3">
-                                            <div class="menu-content px-3">
-                                                <label
-                                                    class="form-check form-switch form-check-custom form-check-solid">
-                                                    <input class="form-check-input w-30px h-20px" type="checkbox"
-                                                           value="1" checked="checked" name="notifications"/>
-                                                    <span class="form-check-label text-muted fs-7">اعلان ها</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="separator my-2"></div>
                                 <div class="menu-item px-5 my-1">
-                                    <a href="../../demo1/dist/account/settings.html" class="menu-link px-5">اکانت
+                                    <a href="#" class="menu-link px-5">اکانت
                                         تنظیمات</a>
                                 </div>
                                 <div class="menu-item px-5">
-                                    <a href="../../demo1/dist/authentication/layouts/corporate/sign-in.html"
+                                    <a href="#"
                                        class="menu-link px-5">خروج</a>
                                 </div>
                             </div>
