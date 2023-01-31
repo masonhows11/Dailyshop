@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html direction="rtl" dir="rtl" style="direction:rtl">
 <head>
-    <base href=""/>
     <title>پنل مدیریت</title>
     <meta charset="utf-8"/>
-   <link rel="shortcut icon" href="#" />
+    <link rel="icon" type="image/x-icon" href="#">
     <link href="{{ asset('assets/plugins/global/plugins.bundle.rtl.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('assets/css/style.bundle.rtl.css') }}" rel="stylesheet" type="text/css"/>
 </head>
@@ -37,7 +36,7 @@
                 </div>
                 <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
                     <a href="#" class="d-lg-none">
-                        Good Shop
+                       Daily Shop
                     </a>
                 </div>
                 <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1"
@@ -48,9 +47,7 @@
                          data-kt-drawer-toggle="#kt_app_header_menu_toggle" data-kt-swapper="true"
                          data-kt-swapper-mode="{default: 'append', lg: 'prepend'}"
                          data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}">
-                        <div class="menu menu-rounded menu-column menu-lg-row my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0"
-                            id="kt_app_header_menu" data-kt-menu="true">
-                        </div>
+
                     </div>
                     <div class="app-navbar flex-shrink-0">
                         <div class="app-navbar-item align-items-stretch ms-1 ms-md-3">
@@ -108,10 +105,6 @@
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                                      data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                                    <a href="#" class="menu-link px-5">
-                                        <span class="menu-title">من اشتراک</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
                                     <!--begin::Menu sub-->
                                     <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                         <!--begin::Menu item-->
@@ -156,82 +149,8 @@
                                     </div>
                                     <!--end::Menu sub-->
                                 </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-5">
-                                    <a href="../../demo1/dist/account/statements.html" class="menu-link px-5">من بیانه
-                                        ها</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu separator-->
                                 <div class="separator my-2"></div>
                                 <!--end::Menu separator-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                     data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                                    <a href="#" class="menu-link px-5">
-												<span class="menu-title position-relative">زبان
-												<span
-                                                    class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">انگلیسی
-												<img class="w-15px h-15px rounded-1 ms-2"
-                                                     src="assets/media/flags/united-states.svg" alt=""/></span></span>
-                                    </a>
-                                    <!--begin::Menu sub-->
-                                    <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="../../demo1/dist/account/settings.html"
-                                               class="menu-link d-flex px-5 active">
-													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1"
-                                                             src="assets/media/flags/united-states.svg" alt=""/>
-													</span>انگلیسی</a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="../../demo1/dist/account/settings.html"
-                                               class="menu-link d-flex px-5">
-													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="assets/media/flags/spain.svg"
-                                                             alt=""/>
-													</span>اسپانیایی</a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="../../demo1/dist/account/settings.html"
-                                               class="menu-link d-flex px-5">
-													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="assets/media/flags/germany.svg"
-                                                             alt=""/>
-													</span>آلمانی</a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="../../demo1/dist/account/settings.html"
-                                               class="menu-link d-flex px-5">
-													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="assets/media/flags/japan.svg"
-                                                             alt=""/>
-													</span>ژاپنی</a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
-                                        <div class="menu-item px-3">
-                                            <a href="../../demo1/dist/account/settings.html"
-                                               class="menu-link d-flex px-5">
-													<span class="symbol symbol-20px me-4">
-														<img class="rounded-1" src="assets/media/flags/france.svg"
-                                                             alt=""/>
-													</span>فرانسه</a>
-                                        </div>
-                                        <!--end::Menu item-->
-                                    </div>
-                                    <!--end::Menu sub-->
-                                </div>
-                                <!--end::Menu item-->
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-5 my-1">
                                     <a href="../../demo1/dist/account/settings.html" class="menu-link px-5">اکانت
@@ -248,24 +167,7 @@
                             <!--end::کاربر account menu-->
                             <!--end::Menu wrapper-->
                         </div>
-                        <div class="app-navbar-item d-lg-none ms-2 me-n3" title="مشاهده header menu">
-                            <div class="btn btn-icon btn-active-color-primary w-30px h-30px w-md-35px h-md-35px"
-                                 id="kt_app_header_menu_toggle">
-                                <!--begin::Svg Icon | path: icons/duotune/text/txt001.svg-->
-                                <span class="svg-icon svg-icon-2 svg-icon-md-1">
-											<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-												<path
-                                                    d="M13 11H3C2.4 11 2 10.6 2 10V9C2 8.4 2.4 8 3 8H13C13.6 8 14 8.4 14 9V10C14 10.6 13.6 11 13 11ZM22 5V4C22 3.4 21.6 3 21 3H3C2.4 3 2 3.4 2 4V5C2 5.6 2.4 6 3 6H21C21.6 6 22 5.6 22 5Z"
-                                                    fill="currentColor"/>
-												<path opacity="0.3"
-                                                      d="M21 16H3C2.4 16 2 15.6 2 15V14C2 13.4 2.4 13 3 13H21C21.6 13 22 13.4 22 14V15C22 15.6 21.6 16 21 16ZM14 20V19C14 18.4 13.6 18 13 18H3C2.4 18 2 18.4 2 19V20C2 20.6 2.4 21 3 21H13C13.6 21 14 20.6 14 20Z"
-                                                      fill="currentColor"/>
-											</svg>
-										</span>
-                                <!--end::Svg Icon-->
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -277,7 +179,7 @@
                  data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
                 <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
                     <a href="#">
-                        Good Shop
+                        Daily Shop
                     </a>
                     <div id="kt_app_sidebar_toggle"
                          class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate"
@@ -359,78 +261,68 @@
 											<span class="menu-arrow"></span>
 										</span>
                                 <div class="menu-sub menu-sub-accordion">
-                                    <!--begin:Menu item-->
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/pages/user-profile/overview.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">بررسی اجمالی</span>
                                         </a>
-                                        <!--end:Menu link-->
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/pages/user-profile/projects.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">پروژه ها</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/pages/user-profile/campaigns.html">
+
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">کمپین ها</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/pages/user-profile/documents.html">
+
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">اسناد</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/pages/user-profile/followers.html">
+
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">فالوورها</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/pages/user-profile/activity.html">
+
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">فعالیت</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
+
                                 </div>
                             </div>
                             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
@@ -466,7 +358,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/account/overview.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -478,7 +370,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/account/settings.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -490,7 +382,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/account/security.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -502,7 +394,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/account/activity.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -514,7 +406,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/account/billing.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -526,7 +418,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/account/statements.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -538,7 +430,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/account/referrals.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -550,7 +442,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/account/api-keys.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -562,7 +454,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link" href="../../demo1/dist/account/logs.html">
+                                        <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -633,7 +525,6 @@
 <!--end::اپلیکیشن-->
 
 <!--begin::Javascript-->
-<script>var hostUrl = "assets/";</script>
 <!--begin::Global Javascript Bundle(mوatory for all pages)-->
 <script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
 <script src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
