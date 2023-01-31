@@ -19,7 +19,7 @@
             <div class="app-container container-fluid d-flex align-items-stretch justify-content-between" id="kt_app_header_container">
                 <div class="d-flex align-items-center d-lg-none ms-n3 me-1 me-md-2" title="مشاهده sidebar menu">
                     <div class="btn btn-icon btn-active-color-primary w-35px h-35px" id="kt_app_sidebar_mobile_toggle">
-                        <!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+
                         <span class="svg-icon svg-icon-2 svg-icon-md-1">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +31,7 @@
                                               fill="currentColor"/>
 									</svg>
 								</span>
-                        <!--end::Svg Icon-->
+
                     </div>
                 </div>
                 <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
@@ -53,45 +53,41 @@
                         <div class="app-navbar-item align-items-stretch ms-1 ms-md-3">
                         </div>
                         <div class="app-navbar-item ms-1 ms-md-3" id="kt_header_user_menu_toggle">
-                            <!--begin::Menu wrapper-->
+
                             <div class="cursor-pointer symbol symbol-30px symbol-md-40px"
                                  data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent"
                                  data-kt-menu-placement="bottom-end">
                                 <img src="assets/media/avatars/300-1.jpg" alt="user"/>
                             </div>
-                            <!--begin::کاربر account menu-->
+
                             <div
                                 class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px"
                                 data-kt-menu="true">
-                                <!--begin::Menu item-->
+
                                 <div class="menu-item px-3">
                                     <div class="menu-content d-flex align-items-center px-3">
-                                        <!--begin::Avatar-->
+
                                         <div class="symbol symbol-50px me-5">
                                             <img alt="Logo" src="assets/media/avatars/300-1.jpg"/>
                                         </div>
-                                        <!--end::Avatar-->
-                                        <!--begin::کاربرname-->
+
                                         <div class="d-flex flex-column">
                                             <div class="fw-bold d-flex align-items-center fs-5">جلالی
                                                 <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">حرفه ای</span>
                                             </div>
                                             <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">max@kt.com</a>
                                         </div>
-                                        <!--end::کاربرname-->
+
                                     </div>
                                 </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu separator-->
+
                                 <div class="separator my-2"></div>
-                                <!--end::Menu separator-->
-                                <!--begin::Menu item-->
+
                                 <div class="menu-item px-5">
                                     <a href="#" class="menu-link px-5">پروفایل
                                         من</a>
                                 </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
+
                                 <div class="menu-item px-5">
                                     <a href="#" class="menu-link px-5">
                                         <span class="menu-text">پروژه ها من</span>
@@ -101,40 +97,30 @@
 												</span>
                                     </a>
                                 </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
+
                                 <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                                      data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                                    <!--begin::Menu sub-->
+
                                     <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                        <!--begin::Menu item-->
+
                                         <div class="menu-item px-3">
                                             <a href="#" class="menu-link px-5">مراجعات</a>
                                         </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
+
                                         <div class="menu-item px-3">
                                             <a href="#" class="menu-link px-5">صورتحساب</a>
                                         </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
                                         <div class="menu-item px-3">
                                             <a href="#" class="menu-link px-5">پرداخت
                                                 ها</a>
                                         </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu item-->
                                         <div class="menu-item px-3">
                                             <a href="#"
                                                class="menu-link d-flex flex-stack px-5">بیانه ها
                                                 <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip"
                                                    title="نمایش your statements"></i></a>
                                         </div>
-                                        <!--end::Menu item-->
-                                        <!--begin::Menu separator-->
                                         <div class="separator my-2"></div>
-                                        <!--end::Menu separator-->
-                                        <!--begin::Menu item-->
                                         <div class="menu-item px-3">
                                             <div class="menu-content px-3">
                                                 <label
@@ -145,29 +131,20 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <!--end::Menu item-->
                                     </div>
-                                    <!--end::Menu sub-->
                                 </div>
                                 <div class="separator my-2"></div>
-                                <!--end::Menu separator-->
-                                <!--begin::Menu item-->
                                 <div class="menu-item px-5 my-1">
                                     <a href="../../demo1/dist/account/settings.html" class="menu-link px-5">اکانت
                                         تنظیمات</a>
                                 </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
                                 <div class="menu-item px-5">
                                     <a href="../../demo1/dist/authentication/layouts/corporate/sign-in.html"
                                        class="menu-link px-5">خروج</a>
                                 </div>
-                                <!--end::Menu item-->
                             </div>
-                            <!--end::کاربر account menu-->
-                            <!--end::Menu wrapper-->
                         </div>
-                       
+
                     </div>
                 </div>
             </div>
@@ -326,10 +303,10 @@
                                 </div>
                             </div>
                             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-                                <!--begin:Menu link-->
+
                                 <span class="menu-link">
 											<span class="menu-icon">
-												<!--begin::Svg Icon | path: icons/duotune/general/gen022.svg-->
+
 												<span class="svg-icon svg-icon-2">
 													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
@@ -347,124 +324,115 @@
                                                               fill="currentColor"/>
 													</svg>
 												</span>
-                                                <!--end::Svg Icon-->
+
 											</span>
 											<span class="menu-title">اکانت</span>
 											<span class="menu-arrow"></span>
 										</span>
-                                <!--end:Menu link-->
-                                <!--begin:Menu sub-->
+
                                 <div class="menu-sub menu-sub-accordion">
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
+
                                         <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">بررسی اجمالی</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
+
                                         <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">تنظیمات</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
+
                                         <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">امنیت</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
+
                                         <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">فعالیت</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
+
                                         <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">صورتحساب</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
+
                                         <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">بیانه ها</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
+
                                         <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">مراجعات</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
+
                                         <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">کلید ای پی ای</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
-                                    <!--begin:Menu item-->
+
                                     <div class="menu-item">
-                                        <!--begin:Menu link-->
+
                                         <a class="menu-link" href="#">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
                                             <span class="menu-title">گزارش</span>
                                         </a>
-                                        <!--end:Menu link-->
+
                                     </div>
-                                    <!--end:Menu item-->
+
                                 </div>
-                                <!--end:Menu sub-->
+
                             </div>
                         </div>
                     </div>
@@ -520,16 +488,9 @@
             </div>
         </div>
     </div>
-    <!--end::Page-->
 </div>
-<!--end::اپلیکیشن-->
-
-<!--begin::Javascript-->
-<!--begin::Global Javascript Bundle(mوatory for all pages)-->
 <script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
 <script src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
-<!--end::Global Javascript Bundle-->
-<!--end::Javascript-->
 </body>
-<!--end::Body-->
+
 </html>
