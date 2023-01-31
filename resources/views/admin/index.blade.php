@@ -55,7 +55,7 @@
                             <div class="cursor-pointer symbol symbol-30px symbol-md-40px"
                                  data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent"
                                  data-kt-menu-placement="bottom-end">
-                                <img src="assets/media/avatars/300-1.jpg" alt="user"/>
+                                <img src="assets/media/avatars/admin.png" alt="user"/>
                             </div>
 
                             <div
@@ -66,7 +66,7 @@
                                     <div class="menu-content d-flex align-items-center px-3">
 
                                         <div class="symbol symbol-50px me-5">
-                                            <img alt="Logo" src="assets/media/avatars/300-1.jpg"/>
+                                            <img alt="Logo" src="assets/media/avatars/admin.png"/>
                                         </div>
 
                                         <div class="d-flex flex-column">
@@ -415,6 +415,13 @@
                     </div>
                     <div id="kt_app_content" class="app-content flex-column-fluid">
                         <div id="kt_app_content_container" class="app-container container-fluid">
+                            <!-- start main content -->
+
+                            <div id="app">
+
+                            </div>
+
+                            <!-- end main content -->
                         </div>
                     </div>
                 </div>
@@ -422,18 +429,14 @@
                     <div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
                         <div class="text-dark order-2 order-md-1">
                             <span class="text-muted fw-semibold me-1">2022&copy;</span>
-                            <a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Keenthemes</a>
+                            <a href="#" target="_blank" class="text-gray-800 text-hover-primary">Daily Shop</a>
                         </div>
                         <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
                             <li class="menu-item">
-                                <a href="https://keenthemes.com" target="_blank" class="menu-link px-2">درباره</a>
+                                <a href="#" target="_blank" class="menu-link px-2">درباره</a>
                             </li>
                             <li class="menu-item">
-                                <a href="https://rtl-theme.com" target="_blank" class="menu-link px-2">پشتیبانی</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="https://www.rtl-theme.com/metronic-admin-html-template/" target="_blank"
-                                   class="menu-link px-2">خرید</a>
+                                <a href="#" target="_blank" class="menu-link px-2">پشتیبانی</a>
                             </li>
                         </ul>
                     </div>
@@ -442,6 +445,7 @@
         </div>
     </div>
 </div>
+@vite('resources/js/app.js')
 <script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
 <script src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
 </body>
