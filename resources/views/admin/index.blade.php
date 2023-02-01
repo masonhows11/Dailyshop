@@ -417,10 +417,7 @@
                         <div id="kt_app_content_container" class="app-container container-fluid">
                             <!-- start main content -->
 
-                            <div id="app">
-
-                            </div>
-
+                           
                             <!-- end main content -->
                         </div>
                     </div>
