@@ -2,17 +2,20 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
+    use HasFactory;
     use HasApiTokens, HasFactory, Notifiable,HasRoles;
 
+    protected $guard = 'admin';
+
+    protected $table = 'admins';
     /**
      * The attributes that are mass assignable.
      *
@@ -20,8 +23,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'first_name',
+        'last_name',
         'email',
-        'password',
+        'mobile',
+        'token',
     ];
 
     /**
@@ -41,5 +47,26 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'token_verified_at' => 'datetime',
     ];
+
+    public function routeNotificationForRayganSms()
+    {
+        return $this->mobile;
+    }
+
+    /*public static function getPermissionIds()
+    {
+        return Permission::all()->pluck('id');
+    }*/
+
+    public function getPermissionIds()
+    {
+        return $this->permissions->pluck('id');
+    }
+
+    public static function getRoleIds()
+    {
+        return Role::all()->pluck('id');
+    }
 }
