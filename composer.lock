@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1c08e78c32bc96208e815f5498b3144",
+    "content-hash": "4d49028c35be8390ffa30a8f345eb6bc",
     "packages": [
         {
             "name": "brick/math",
@@ -5250,6 +5250,114 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.6"
             },
             "time": "2023-01-03T09:29:04+00:00"
+        },
+        {
+            "name": "trez/raygan-sms",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/farhadmirzapour/RayganSms.git",
+                "reference": "30eb17c640e486519fe71cdbe287334e8be8381a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/farhadmirzapour/RayganSms/zipball/30eb17c640e486519fe71cdbe287334e8be8381a",
+                "reference": "30eb17c640e486519fe71cdbe287334e8be8381a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "*",
+                "illuminate/notifications": "*",
+                "illuminate/support": "*",
+                "php": ">=5.6.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Trez\\RayganSms\\RayganSmsServiceProvider"
+                    ],
+                    "aliases": {
+                        "RayganSms": "Trez\\RayganSms\\Facades"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Trez\\RayganSms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Farhad Mirzapour",
+                    "email": "farhad.mirzapour@gmail.com",
+                    "homepage": "http://farhadnote.ir"
+                }
+            ],
+            "description": "A simple API extension for send text message By Raygan Sms",
+            "keywords": [
+                "raygansms",
+                "trez"
+            ],
+            "support": {
+                "issues": "https://github.com/farhadmirzapour/RayganSms/issues",
+                "source": "https://github.com/farhadmirzapour/RayganSms"
+            },
+            "time": "2020-06-29T22:39:31+00:00"
+        },
+        {
+            "name": "trez/raygan-sms-notification-channel",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/farhadmirzapour/RaygansmsChannel.git",
+                "reference": "1b868adf954b2afa57c4eb77cbf1443466391fcb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/farhadmirzapour/RaygansmsChannel/zipball/1b868adf954b2afa57c4eb77cbf1443466391fcb",
+                "reference": "1b868adf954b2afa57c4eb77cbf1443466391fcb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/notifications": "*",
+                "php": ">=5.6.4",
+                "trez/raygan-sms": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NotificationChannels\\RayganSms\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Farhad Mirzapour",
+                    "email": "farhad.mirzapour@gmail.com",
+                    "homepage": "http://farhadnote.ir"
+                }
+            ],
+            "description": "Raygan SMS Channel for Laravel 5.3+",
+            "keywords": [
+                "laravel-notification-channels",
+                "raygansms",
+                "raygansms-channel",
+                "trez"
+            ],
+            "support": {
+                "issues": "https://github.com/farhadmirzapour/RaygansmsChannel/issues",
+                "source": "https://github.com/farhadmirzapour/RaygansmsChannel"
+            },
+            "time": "2019-06-19T19:11:47+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
