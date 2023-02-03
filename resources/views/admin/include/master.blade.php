@@ -29,5 +29,4 @@
     </div>
    @include('admin.include.scripts')
 </body>
-
 </html>
