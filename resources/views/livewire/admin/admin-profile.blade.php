@@ -1,37 +1,34 @@
 <div>
     @section('admin_title')
-        پروفایل کاربری
+    پروفایل کاربری
     @endsection
     <div class="container">
 
         <div class="row alert-profile">
             @if(session()->has('success'))
-                <div class=" alert alert-success alert-dismissible alert-component text-center">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>{{ session('success') }}</strong>
-                </div>
+            <div class=" alert alert-success alert-dismissible alert-component text-center">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>{{ session('success') }}</strong>
+            </div>
             @endif
             @if(session()->has('error'))
-                <div class=" alert alert-danger alert-dismissible alert-component text-center">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>{{ session('error') }}</strong>
-                </div>
+            <div class=" alert alert-danger alert-dismissible alert-component text-center">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>{{ session('error') }}</strong>
+            </div>
             @endif
         </div>
 
-        <div class="row admin-profile-section">
+        <div class="row admin-profile-info">
             <form wire:submit.prevent="update">
                 <div class="row">
                     <div class="col">
                         <div class="image-wrapper my-5 d-flex flex-column  align-items-center">
                             <div class="image-content   border border-3 rounded-3">
                                 @if($image_path)
-                                    <img src="{{ $image_path->temporaryUrl() }}" alt="admin_image_path"
-                                         class="rounded image-admin-preview">
+                                <img src="{{ $image_path->temporaryUrl() }}" alt="admin_image_path" class="rounded image-admin-preview">
                                 @else
-                                    <img class="rounded admin-image"
-                                         src="{{ $admin->image_path ?  asset('storage/admin/'.$admin->image_path)  : asset('assets/media/avatars/no-user.png') }}"
-                                         alt="">
+                                <img class="rounded admin-image" src="{{ $admin->image_path ?  asset('storage/admin/'.$admin->image_path)  : asset('assets/media/avatars/no-user.png') }}" alt="">
                                 @endif
                             </div>
 
@@ -76,8 +73,7 @@
                         </div>
                         <div class="form-group my-5">
                             <label for="email" class="form-label">ایمیل:</label>
-                            <input type="email" wire:model.lazy="email" class="form-control" value="{{ $admin->email}}"
-                                   id="email">
+                            <input type="email" wire:model.lazy="email" class="form-control" value="{{ $admin->email}}" id="email">
                             @error('email')
                             <div class="alert alert-danger my-2">
                                 {{ $message }}
@@ -97,5 +93,3 @@
         </div>
     </div>
 </div>
-
-
