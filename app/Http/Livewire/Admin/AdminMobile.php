@@ -28,7 +28,7 @@ class AdminMobile extends Component
     protected function rules()
     {
         return [
-            'mobile' => ['unique:users',Rule::unique('users')->ignore(Auth::id()), new MobileValidationRule()]
+            'mobile' => ['unique:users','required', new MobileValidationRule()]
         ];
     }
 
@@ -36,6 +36,7 @@ class AdminMobile extends Component
     protected $messages =
         [
             'mobile.unique' => 'موبایل وارد شده تکراری است',
+            'mobile.required' => 'شماره موبایل  الزامی است',
         ];
 
     public function editMobile()
@@ -49,9 +50,9 @@ class AdminMobile extends Component
             $admin->code_verified_at = null;
             $admin->remember_token = null;
             $admin->save();
-            $admin->notify(new AdminAuthNotification($admin));
+            // $admin->notify(new AdminAuthNotification($admin));
             session()->flash('success', 'کد فعال سازی به شماره موبایل ارسال شد');
-            return redirect()->to('/admin/validate/mobileForm');
+            return redirect()->to('/admin/validate/mobile/form');
         }catch (\Exception $ex){
             return view('errors_custom.model_store_error');
         }

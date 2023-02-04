@@ -34,7 +34,7 @@
 
                             <div class="mb-3 mt-3">
                                 <label for="image" class="form-label"> آپلود عکس</label>
-                                <input type="file" class="form-control" wire:model="image_path" id="image">
+                                <input type="file" class="form-control" wire:model.defer="image_path" id="image">
                             </div>
                             @error('image_path')
                             <div class="alert alert-danger my-2">
