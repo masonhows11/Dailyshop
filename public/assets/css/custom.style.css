@@ -1,3 +1,281 @@
 .alert-profile{
     height:50px;
 }
+
+.logo-login,
+.admin-logo {
+    height: 80px;
+    width: 80px;
+}
+.alert-dive {
+    height: 150px;
+}
+.validate-mobile-admin-form .timer {
+
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000000;
+}
+.aside-logo a{
+    font-size:1.5rem;
+    font-weight:600;
+}
+/**********  admin profile section  **************/
+.userAvatarFile input {
+    display: none;
+}
+.userAvatarFile label {
+    cursor: pointer;
+    border: 2px #ff6347 solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+.userAvatarFile label:hover {
+    border: 2px #ff6347 solid;
+}
+.admin-profile-info .image-content img {
+    height: 200px;
+    width: 180px;
+}
+/************ users section */
+.admin-list-users .list-content {
+    height: 680px;
+}
+.admin-list-users .list-content table tr th {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.admin-list-users .fa-trash {
+    color: tomato;
+    font-size: 1.2rem;
+}
+/************ category section */
+.sample-section-create label,
+.tag-section-create label,
+.no-article p,
+.no-tag p,
+.article-section-create label,
+.article-section-create #button-image,
+.category-section-index .no-categories p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.category-content ul li {
+    list-style: none;
+}
+.item-category .fa-cut {
+    color: darkslategray;
+    font-size: 1.5rem;
+}
+.list-specific .fa-list-ul {
+    font-size: 1.5rem;
+    color: lightgreen;
+}
+.item-category .item-category-title {
+    width: 200px;
+}
+.category-section-create label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.tag-section-index .fa-edit,
+.article-section-index .fa-edit,
+.item-category-actions .fa-edit {
+    color: deepskyblue;
+    font-size: 1.4rem;
+}
+.tag-section-index .fa-trash,
+.article-section-index .fa-trash,
+.item-category-actions .fa-trash {
+    font-size: 1.4rem;
+    color: tomato;
+}
+.item-category-actions .fa-unlink {
+    font-size: 1.3rem;
+    color: tomato;
+}
+/************ article section index */
+.last-article .card {
+    width: auto;
+}
+.article-section-index {
+    height: auto;
+    overflow-y: scroll;
+}
+.article-section-create input[type="text"] {
+    font-family: "IRANSansWeb", Sans-Serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    color: #51585e !important;
+}
+::-webkit-input-placeholder {
+    font-family: "IRANSansWeb", Sans-Serif !important;
+    font-weight: bold !important;
+    font-size: 1rem !important;
+    color: #51585e !important;
+}
+::-moz-placeholder {
+    font-family: "IRANSansWeb", Sans-Serif !important;
+    font-weight: bold !important;
+    font-size: 1rem !important;
+    color: #51585e !important;
+}
+:-ms-input-placeholder {
+    font-family: "IRANSansWeb", Sans-Serif !important;
+    font-weight: bold !important;
+    font-size: 1rem !important;
+    color: #51585e !important;
+}
+::placeholder {
+    font-family: "IRANSansWeb", Sans-Serif !important;
+    font-weight: bold !important;
+    font-size: 1rem !important;
+    color: #51585e !important;
+}
+.article-section-index .card-img-top {
+    height: 100%;
+}
+.article-section-index .article-category, .article-tag {
+    font-weight: 500;
+}
+.article-section-index .card-title {
+    font-size: 1.6rem;
+}
+.article-section-index .card-text {
+    font-size: 2rem !important;
+}
+.article-section-create .chosen-choices {
+    border: 1px solid #E4E6EF;
+    border-radius: 5px;
+}
+.last-article .article-date,
+.article-date p span {
+    color: #000000;
+    font-weight: 600;
+    font-size: 1rem;
+}
+/*********** tag section */
+.tag-section-index table tr th {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.tag-section-index .list-content {
+    height: 500px;
+}
+/********** sample section*/
+#result {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+.sample-section-create .main-image-preview img {
+    width: 200px;
+    height: 220px;
+}
+.sample-section-index .card img{
+    width: 100%;
+    height:300px;
+}
+.sample-section-index .card-body{
+    border-top:2px solid #222222;
+}
+.wk-article-img-card {
+    background:#ffffff;
+}
+.wk-article-card-footer .btn-list-comment{
+    margin-left:5px;
+    background:#F5F8FA;
+}
+.wk-article-card-footer  a:hover{
+    background:deepskyblue;
+    color:#ffffff;
+}
+/************ article comment section*/
+.wk-article-card-body .desc{
+    text-align:justify;
+    direction:rtl;
+    padding:5px;
+    font-size:15px;
+
+}
+.wk-article-img-card{
+    width: 100%;
+}
+.wk-article-img-card img{
+    width:100%;
+    height: 270px;
+}
+.wk-article-card-body{
+    background:#ecf0f1;
+    border:2px solid #ecf0f1;
+    border-radius: 8px;
+}
+.wk-article-card-title h5{
+    margin-right: 5px;
+}
+.wk-article-card-footer a.continue:hover{
+    color:#2196F3;
+}
+/************ list comment sample & article  */
+.post-card-section .comment-post-title p{
+    font-size:1.5rem;
+}
+.post-card-section .card img{
+    height:270px;
+}
+.post-card-section .card-body p{
+    font-size: 1.2rem;
+}
+/************ media query*/
+@media (max-width: 300px) {
+    .article-footer-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-op {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .article-op a {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .article-footer-card {
+        display: flex;
+        flex-flow: row;
+    }
+
+    .article-op {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1200px) {
+    .article-footer-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-footer-card .article-op {
+        margin: auto;
+    }
+
+    .article-op {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .article-op a {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+

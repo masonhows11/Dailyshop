@@ -27,7 +27,7 @@
                             <div class="image-content   border border-3 rounded-3">
                                 @if($image_path)
                                     <img src="{{ $image_path->temporaryUrl() }}" alt="admin_image_path"
-                                         class="rounded image_admin_preview">
+                                         class="rounded image-admin-preview">
                                 @else
                                     <img class="rounded admin-image"
                                          src="{{ $admin->image_path ?  asset('storage/admin/'.$admin->image_path)  : asset('assets/media/avatars/no-user.png') }}"
