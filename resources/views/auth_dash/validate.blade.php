@@ -37,7 +37,7 @@
                                    type="text"/>
 
                             @error('mobile')
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger mt-3">
                                 {{ $message }}
                             </div>
                             @enderror
@@ -51,7 +51,7 @@
                                    type="text"
                                    name="code"/>
                             @error('code')
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger mt-3">
                                 {{ $message }}
                             </div>
                             @enderror
