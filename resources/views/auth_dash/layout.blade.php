@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html direction="rtl" dir="rtl" lang="fa" style="direction: rtl" >
+<html  direction="rtl" dir="rtl" lang="fa" style="direction: rtl" >
 <head>
     <title>@yield('dash_auth_title')</title>
     <meta charset="utf-8" />

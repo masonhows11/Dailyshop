@@ -22,12 +22,13 @@
                         @csrf
                         <div class="text-center mb-10">
                             <h1 class="text-dark mb-3">ورود دو مرحله ای</h1>
-                            <div class="text-muted fw-bold fs-5 mb-5">وارد کردن کد تایید ارسال شده به شما</div>
+                            <div class="text-muted fw-bold fs-5 mb-5">وارد کردن کد تایید ارسال شده به شماره موبایل</div>
                         </div>
                         @if(session()->exists('admin_mobile'))
                             <input type="hidden"  id="number" value="{{ session()->get('admin_mobile') }}">
                         @endif
-                        <div class="mb-10 px-md-10">
+
+                        <div class="mb-10 px-10">
                             <label for="mobile" class="form-label fs-6 fw-bolder text-dark">شماره موبایل</label>
                             <input class="form-control form-control-lg form-control-solid"
                                    name="mobile"
@@ -35,25 +36,27 @@
                                    type="text"  />
                         </div>
                         @error('mobile')
-                        <div class="alert fv-row alert-danger mb-10">
+                        <div class="alert alert-danger">
                             {{ $message }}
                         </div>
                         @enderror
-                        <div class="mb-10 px-md-10">
-                            <label class="fw-bolder text-start text-dark fs-6 mb-1 ms-1" for="code">کد فعال سازی را وارد کنید</label>
+
+                        <div class="mb-10 px-10">
+                            <label class="form-label fs-6 fw-bolder text-dark" for="code">کد فعال سازی را وارد کنید</label>
                             <input class="form-control form-control-lg form-control-solid"
                                    id="code"
                                    type="text"
                                    name="code"/>
                             @error('code')
-                            <div class="alert alert-danger mt-2">
+                            <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
                             @enderror
                         </div>
+
                         <div class="mb-10 px-md-10">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" wire:model="remember" name="remember"> من را به خاطر بسپار !
+                                <input class="form-check-input" type="checkbox"  name="remember"> من را به خاطر بسپار !
                             </label>
                         </div>
                         <div class="d-flex flex-center">

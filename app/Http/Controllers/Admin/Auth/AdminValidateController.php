@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
-use App\Models\User;
 use App\Notifications\AdminAuthNotification;
 use App\Rules\MobileValidationRule;
 use App\Services\CheckExpireToken;
@@ -35,7 +34,7 @@ class AdminValidateController extends Controller
         if($validated == false){
             session()->flash('error','کد فعال سازی معتبر نمی باشد');
             session()->forget('admin_mobile');
-            return redirect()->route('admin.Login.form');
+            return redirect()->route('admin.login.form');
         }
         if ($admin = Admin::where(['mobile'=>$request->mobile,'code'=>$request->code])->first()){
             Auth::guard('admin')->login($admin, $request->remember);
