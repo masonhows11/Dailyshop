@@ -35,12 +35,14 @@
                                    name="mobile"
                                    id="mobile"
                                    type="text"/>
+
+                            @error('mobile')
+                            <div class="alert alert-danger">
+                                {{ $message }}
+                            </div>
+                            @enderror
+
                         </div>
-                        @error('mobile')
-                        <div class="alert alert-danger">
-                            {{ $message }}
-                        </div>
-                        @enderror
 
                         <div class="my-6 px-10">
                             <label for="code" class="form-label fs-6 fw-bolder text-dark">کد فعال سازی را وارد کنید</label>
