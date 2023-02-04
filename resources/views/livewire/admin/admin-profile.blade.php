@@ -46,7 +46,7 @@
                     <div class="col">
                         <div class="form-group my-5">
                             <label for="user" class="form-label">نام کاربری:</label>
-                            <input type="text" wire:model.lazy="name" class="form-control" id="user">
+                            <input type="text" wire:model.defer="name" class="form-control" id="user">
                             @error('name')
                             <div class="alert alert-danger my-2">
                                 {{ $message }}
@@ -55,7 +55,7 @@
                         </div>
                         <div class="form-group my-5">
                             <label for="firstName" class="form-label">نام:</label>
-                            <input type="text" wire:model.lazy="first_name" class="form-control" id="firstName">
+                            <input type="text" wire:model.defer="first_name" class="form-control" id="firstName">
                             @error('first_name')
                             <div class="alert alert-danger my-2">
                                 {{ $message }}
@@ -64,7 +64,7 @@
                         </div>
                         <div class="form-group my-5">
                             <label for="lastName" class="form-label">نام خانوادگی:</label>
-                            <input type="text" wire:model.lazy="last_name" class="form-control" id="lastName">
+                            <input type="text" wire:model.defer="last_name" class="form-control" id="lastName">
                             @error('last_name')
                             <div class="alert alert-danger my-2">
                                 {{ $message }}
@@ -73,7 +73,7 @@
                         </div>
                         <div class="form-group my-5">
                             <label for="email" class="form-label">ایمیل:</label>
-                            <input type="email" wire:model.lazy="email" class="form-control" value="{{ $admin->email}}" id="email">
+                            <input type="email" wire:model.defer="email" class="form-control" value="{{ $admin->email}}" id="email">
                             @error('email')
                             <div class="alert alert-danger my-2">
                                 {{ $message }}
