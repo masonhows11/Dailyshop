@@ -99,8 +99,8 @@ class AdminProfile extends Component
     public function render()
     {
         return view('livewire.admin.admin-profile')
-            ->extends('dash.include.master')
-            ->section('dash_main_content')
+            ->extends('admin.include.master')
+            ->section('admin_main')
             ->with(['admin'=>Auth::user()]);
     }
 }

@@ -1,5 +1,5 @@
 <div>
-    @section('dash_page_title')
+    @section('admin_title')
         پروفایل کاربری
     @endsection
     <div class="container">

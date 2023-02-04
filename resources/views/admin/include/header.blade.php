@@ -41,14 +41,14 @@
                                     <div class="fw-bold d-flex align-items-center fs-5">
                                         {{ $admin->name  }}
                                     </div>
-                                    <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{ $admin->first_name }} {{ $admin->last_name }}</a>
+                                    <a href="{{ route('admin.profile') }}" class="fw-semibold text-muted text-hover-primary fs-7">{{ $admin->first_name }} {{ $admin->last_name }}</a>
                                 </div>
 
                             </div>
                         </div>
                         <div class="separator my-2"></div>
                         <div class="menu-item px-5">
-                            <a href="#" class="menu-link px-5">پروفایل
+                            <a href="{{ route('admin.profile') }}" class="menu-link px-5">پروفایل
                                 من</a>
                         </div>
                         <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
@@ -59,7 +59,7 @@
                                 تنظیمات</a>
                         </div>
                         <div class="menu-item px-5">
-                            <a href="#" class="menu-link px-5">خروج</a>
+                            <a href="{{ route('admin.logout') }}" class="menu-link px-5">خروج</a>
                         </div>
                     </div>
                 </div>

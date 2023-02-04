@@ -48,7 +48,7 @@ Route::prefix('admin')->group(function () {
 Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
 
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
-    Route::get('/logOut', [AdminAuthController::class, 'logOut'])->name('logOut');
+    Route::get('/logOut', [AdminAuthController::class, 'logOut'])->name('logout');
 
 });
 

@@ -1,5 +1,5 @@
 <div>
-    @section('dash_page_title')
+    @section('admin_title')
         پروفایل کاربری
     @endsection
     <div class="container">
@@ -32,7 +32,7 @@
                                          class="rounded image_admin_preview">
                                 @else
                                     <img class="rounded admin-image"
-                                         src="{{ $admin->image_path ?  asset('storage/admin/'.$admin->image_path)  : asset('assets/images/users/no-user.png') }}"
+                                         src="{{ $admin->image_path ?  asset('storage/admin/'.$admin->image_path)  : asset('assets/media/avatars/no-user.png') }}"
                                          alt="">
                                 @endif
                             </div>
