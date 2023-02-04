@@ -28,7 +28,7 @@ class AdminMobile extends Component
     protected function rules()
     {
         return [
-            'mobile' => ['unique:users','required', new MobileValidationRule()]
+            'mobile' => ['unique:admins','required', new MobileValidationRule()]
         ];
     }
 
