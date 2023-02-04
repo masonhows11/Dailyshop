@@ -6,15 +6,13 @@
 
         <div class="row alert-profile">
             @if(session()->has('success'))
-                <div
-                    class="col-xl-7 col-lg-7 col-md-7 alert alert-success alert-dismissible alert-component text-center">
+                <div class=" alert alert-success alert-dismissible alert-component text-center">
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                     <strong>{{ session('success') }}</strong>
                 </div>
             @endif
             @if(session()->has('error'))
-                <div
-                    class="col-xl-7 col-lg-7 col-md-7 alert alert-danger alert-dismissible alert-component text-center">
+                <div class=" alert alert-danger alert-dismissible alert-component text-center">
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                     <strong>{{ session('error') }}</strong>
                 </div>
