@@ -18,22 +18,23 @@
                     وب سولو
                 </a>
                 <div class="w-lg-600px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto admin-validate-form">
-                    <form action="{{ route('admin.validate.mobile') }}" method="post" class="form w-100 mb-10"  novalidate="novalidate">
+                    <form action="{{ route('admin.validate.mobile') }}" method="post" class="form w-100 mb-10"
+                          novalidate="novalidate">
                         @csrf
                         <div class="text-center mb-10">
                             <h1 class="text-dark mb-3">ورود دو مرحله ای</h1>
                             <div class="text-muted fw-bold fs-5 mb-5">وارد کردن کد تایید ارسال شده به شماره موبایل</div>
                         </div>
                         @if(session()->exists('admin_mobile'))
-                            <input type="hidden"  id="number" value="{{ session()->get('admin_mobile') }}">
+                            <input type="hidden" id="number" value="{{ session()->get('admin_mobile') }}">
                         @endif
 
-                        <div class="mb-10 px-10">
+                        <div class="my-6 px-10">
                             <label for="mobile" class="form-label fs-6 fw-bolder text-dark">شماره موبایل</label>
                             <input class="form-control form-control-lg form-control-solid"
                                    name="mobile"
                                    id="mobile"
-                                   type="text"  />
+                                   type="text"/>
                         </div>
                         @error('mobile')
                         <div class="alert alert-danger">
@@ -41,8 +42,8 @@
                         </div>
                         @enderror
 
-                        <div class="mb-10 px-10">
-                            <label class="form-label fs-6 fw-bolder text-dark" for="code">کد فعال سازی را وارد کنید</label>
+                        <div class="my-6 px-10">
+                            <label for="code" class="form-label fs-6 fw-bolder text-dark">کد فعال سازی را وارد کنید</label>
                             <input class="form-control form-control-lg form-control-solid"
                                    id="code"
                                    type="text"
@@ -56,18 +57,19 @@
 
                         <div class="mb-10 px-md-10">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox"  name="remember"> من را به خاطر بسپار !
+                                <input class="form-check-input" type="checkbox" name="remember"> من را به خاطر بسپار !
                             </label>
                         </div>
                         <div class="d-flex flex-center">
-                            <button type="submit"  class="btn btn-lg btn-primary fw-bolder">
+                            <button type="submit" class="btn btn-lg btn-primary fw-bolder">
                                 <span class="indicator-label">ورود</span>
                             </button>
                         </div>
                     </form>
                     <div class="text-center fw-bold fs-5">
-                       <div><span class="text-muted me-1">هنوز کد را دریافت نکرده اید؟</span></div>
-                        <a href="#"  id="resend_token" onclick="startTimer()" class="link-primary fw-bolder fs-5 me-1">ارسال دوباره</a>
+                        <div><span class="text-muted me-1">هنوز کد را دریافت نکرده اید؟</span></div>
+                        <a href="#" id="resend_token" onclick="startTimer()" class="link-primary fw-bolder fs-5 me-1">ارسال
+                            دوباره</a>
                         <a id="timer" class="timer"></a>
                     </div>
                 </div>
@@ -82,15 +84,18 @@
         let timer = document.getElementById('timer');
         let resend = document.getElementById('resend_token');
         let timerInterval;
+
         function displayTime(s) {
             let min = Math.floor(s / 60);
             let sec = s % 60;
             return min.toString().padStart(2, "0") + ':' + sec.toString().padStart(2, "0");
         }
+
         // default timer div element display in none
         timer.style.display = 'none';
         // for display timer in timer div element
         timer.innerHTML = (displayTime(remainingSeconds - counter)).toString();
+
         function startTimer() {
             resend.style.display = 'none';
             timer.style.display = 'block';
@@ -120,18 +125,18 @@
             $.ajax({
                 method: 'POST',
                 url: '{{ route('admin.resend.code') }}',
-                data: {number:number}
+                data: {number: number}
             }).done(function (data) {
-                    console.log(data);
+                console.log(data);
                 if (data['status'] === 200) {
                     Toastify({
-                        text:data['message'],
-                        duration:3000,
+                        text: data['message'],
+                        duration: 3000,
                         gravity: "top",
                         position: "center",
                         stopOnFocus: true,
-                        style:{
-                            background:"linear-gradient(to right, #00b09b, #96c93d)",
+                        style: {
+                            background: "linear-gradient(to right, #00b09b, #96c93d)",
                         }
                     }).showToast();
                 }
