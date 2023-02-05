@@ -1,7 +1,6 @@
 .alert-profile{
     height:50px;
 }
-
 .logo-login,
 .admin-logo {
     height: 80px;
@@ -37,6 +36,10 @@
 .admin-profile-info .image-content img {
     height: 200px;
     width: 180px;
+}
+/************ sidebar section */
+.menu-item .menu-title{
+    font-size: 1.1rem;
 }
 /************ users section */
 .admin-list-users .list-content {
