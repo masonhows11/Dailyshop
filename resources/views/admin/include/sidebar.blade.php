@@ -270,7 +270,7 @@
                     <span class="menu-link">
                         <span class="menu-icon">
                             <span class="svg-icon svg-icon-1">
-                              <svg fill="#ffffff" height="800px" width="800px" version="1.1" id="Capa_1"
+                              <svg fill="#ffffff" height="24" width="24" version="1.1" id="Capa_1"
                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                viewBox="0 0 478.703 478.703" xml:space="preserve" stroke="#ffffff">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"/>
