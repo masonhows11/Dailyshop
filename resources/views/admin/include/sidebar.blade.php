@@ -2,7 +2,7 @@
      data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px"
      data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
     <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
-        <a href="#">
+        <a href="{{ route('admin.dashboard') }}">
             Daily Shop
         </a>
         <div id="kt_app_sidebar_toggle"
@@ -29,7 +29,7 @@
              data-kt-scroll-save-state="true">
             <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu"
                  data-kt-menu="true" data-kt-menu-expو="false">
-                <div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
+                {{--<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
                     <span class="menu-link">
                         <span class="menu-icon">
                             <span class="svg-icon svg-icon-2">
@@ -55,7 +55,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div>--}}
                 <div class="menu-item pt-5">
                     <div class="menu-content">
                         <span class="menu-heading fw-bold text-uppercase fs-7">صفحات</span>
