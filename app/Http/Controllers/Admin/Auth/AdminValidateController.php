@@ -42,7 +42,7 @@ class AdminValidateController extends Controller
             return  redirect()->route('admin.dashboard');
         }
         session()->forget('admin_mobile');
-        return redirect()->route('admin.Login.form');
+        return redirect()->route('admin.login.form');
     }
 
     public function resendCode(Request $request)

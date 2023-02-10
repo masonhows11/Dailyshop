@@ -1,14 +1,19 @@
-.alert-profile{
-    height:50px;
+
+
+.alert-profile {
+    height: 50px;
 }
-.logo-login,
-.admin-logo {
-    height: 80px;
-    width: 80px;
+
+.admin-logo-login{
+    font-family:"IRANSansWeb",Sans-Serif;
+    font-size: 2rem;
+    color: dodgerblue;
 }
+
 .alert-dive {
     height: 150px;
 }
+
 .validate-mobile-admin-form .timer {
 
     font-size: 1.1rem;
@@ -16,43 +21,53 @@
     font-weight: 600;
     color: #000000;
 }
-.aside-logo a{
-    font-size:1.5rem;
-    font-weight:600;
+
+.aside-logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
+
 /**********  admin profile section  **************/
 .userAvatarFile input {
     display: none;
 }
+
 .userAvatarFile label {
     cursor: pointer;
     border: 2px #ff6347 solid;
     border-radius: 5px;
     padding: 5px;
 }
+
 .userAvatarFile label:hover {
     border: 2px #ff6347 solid;
 }
+
 .admin-profile-info .image-content img {
     height: 200px;
     width: 180px;
 }
+
 /************ sidebar section */
-.menu-item .menu-title{
+.menu-item .menu-title {
     font-size: 1.1rem;
 }
+
 /************ users section */
 .admin-list-users .list-content {
     height: 680px;
 }
+
 .admin-list-users .list-content table tr th {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
 .admin-list-users .fa-trash {
     color: tomato;
     font-size: 1.2rem;
 }
+
 /************ category section */
 .sample-section-create label,
 .tag-section-create label,
@@ -64,78 +79,96 @@
     font-weight: bold;
     font-size: 1.2rem;
 }
+
 .category-content ul li {
     list-style: none;
 }
+
 .item-category .fa-cut {
     color: darkslategray;
     font-size: 1.5rem;
 }
+
 .list-specific .fa-list-ul {
     font-size: 1.5rem;
     color: lightgreen;
 }
+
 .item-category .item-category-title {
     width: 200px;
 }
+
 .category-section-create label {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
 .tag-section-index .fa-edit,
 .article-section-index .fa-edit,
 .item-category-actions .fa-edit {
     color: deepskyblue;
     font-size: 1.4rem;
 }
+
 .tag-section-index .fa-trash,
 .article-section-index .fa-trash,
 .item-category-actions .fa-trash {
     font-size: 1.4rem;
     color: tomato;
 }
+
 .item-category-actions .fa-unlink {
     font-size: 1.3rem;
     color: tomato;
 }
+
 /************ article section index */
 /*********** tag section */
 /************ article comment section*/
-.wk-article-card-body .desc{
-    text-align:justify;
-    direction:rtl;
-    padding:5px;
-    font-size:15px;
+.wk-article-card-body .desc {
+    text-align: justify;
+    direction: rtl;
+    padding: 5px;
+    font-size: 15px;
 
 }
-.wk-article-img-card{
+
+.wk-article-img-card {
     width: 100%;
 }
-.wk-article-img-card img{
-    width:100%;
+
+.wk-article-img-card img {
+    width: 100%;
     height: 270px;
 }
-.wk-article-card-body{
-    background:#ecf0f1;
-    border:2px solid #ecf0f1;
+
+.wk-article-card-body {
+    background: #ecf0f1;
+    border: 2px solid #ecf0f1;
     border-radius: 8px;
 }
-.wk-article-card-title h5{
+
+.wk-article-card-title h5 {
     margin-right: 5px;
 }
-.wk-article-card-footer a.continue:hover{
-    color:#2196F3;
+
+.wk-article-card-footer a.continue:hover {
+    color: #2196F3;
 }
+
 /************ list comment sample & article  */
-.post-card-section .comment-post-title p{
-    font-size:1.5rem;
+.post-card-section .comment-post-title p {
+    font-size: 1.5rem;
 }
-.post-card-section .card img{
-    height:270px;
+
+.post-card-section .card img {
+    height: 270px;
 }
-.post-card-section .card-body p{
+
+.post-card-section .card-body p {
     font-size: 1.2rem;
 }
+
 /************ media query*/
 @media (max-width: 300px) {
     .article-footer-card {

@@ -13,9 +13,9 @@
 
         <div class="row">
             <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
-                <h3 class="mb-12">
+                <h3 class="mb-12 admin-logo-login">
                     {{-- <img alt="Logo" src="#" class="h-40px"/>--}}
-                     Daily Shop
+                    دیلی شاپ
                 </h3>
                 <div class="w-lg-600px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto admin-validate-form">
                     <form action="{{ route('admin.validate.mobile') }}" method="post" class="form w-100 mb-10"
