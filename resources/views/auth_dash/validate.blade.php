@@ -13,10 +13,10 @@
 
         <div class="row">
             <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
-                <a href="#" class="mb-12">
+                <h3 class="mb-12">
                     {{-- <img alt="Logo" src="#" class="h-40px"/>--}}
-                    وب سولو
-                </a>
+                     Daily Shop
+                </h3>
                 <div class="w-lg-600px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto admin-validate-form">
                     <form action="{{ route('admin.validate.mobile') }}" method="post" class="form w-100 mb-10"
                           novalidate="novalidate">
@@ -92,7 +92,6 @@
             let sec = s % 60;
             return min.toString().padStart(2, "0") + ':' + sec.toString().padStart(2, "0");
         }
-
         // default timer div element display in none
         timer.style.display = 'none';
         // for display timer in timer div element
@@ -114,8 +113,6 @@
                 }
             }, 1000);
         }
-
-
         $(document).on('click', '#resend_token', function (event) {
             event.preventDefault();
             let number = document.getElementById('number').value;
