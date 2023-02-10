@@ -35,5 +35,6 @@
         </div>
     </div>
    @include('admin.include.scripts')
+   @stack('scripts')
 </body>
 </html>

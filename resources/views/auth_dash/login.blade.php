@@ -47,3 +47,6 @@
 
     </div>
 @endsection
+@push('custom_scripts')
+
+@endpush
