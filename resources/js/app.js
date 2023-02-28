@@ -1,7 +1,12 @@
 import './bootstrap';
-import {createApp} from 'vue'
+
+// import {createApp} from 'vue'
+// import App from './Pages/App.vue'
+// createApp(App).mount("#app")
 
 
-import App from './Pages/App.vue'
+// for add js bootstrap
+import * as bootstrap from 'bootstrap';
 
-createApp(App).mount("#app")
+
+

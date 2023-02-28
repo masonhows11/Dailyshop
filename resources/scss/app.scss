@@ -1,0 +1,547 @@
+// for add scss bootstrap
+// @import "~bootstrap/scss/bootstrap";
+
+
+
+@font-face {
+    font-family: 'IRANSansWeb_Bold';
+    src: url("fonts/IRANSansWeb_Bold.eot") format('opentype');
+    src: url("fonts/IRANSansWeb_Bold.ttf") format("truetype"),
+    url("fonts/IRANSansWeb_Bold.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'IRANSansWeb_Light';
+    src: url("fonts/IRANSansWeb_Light.eot") format('opentype');
+    src: url("fonts/IRANSansWeb_Light.ttf") format("truetype"),
+    url("fonts/IRANSansWeb_Light.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'IRANSansWeb_Medium';
+    src: url("fonts/IRANSansWeb_Medium.eot") format('opentype');
+    src: url("fonts/IRANSansWeb_Medium.ttf") format("truetype"),
+    url("fonts/IRANSansWeb_Medium.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'IRANSansWeb_UltraLight';
+    src: url("fonts/IRANSansWeb_UltraLight.eot") format('opentype');
+    src: url("fonts/IRANSansWeb_UltraLight.ttf") format("truetype"),
+    url("fonts/IRANSansWeb_UltraLight.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'IRANSansWeb';
+    src: url("fonts/IRANSansWeb.eot") format('opentype');
+    src: url("fonts/IRANSansWeb.ttf") format("truetype"),
+    url("fonts/IRANSansWeb.woff") format('woff');
+}
+
+@import "~bootstrap/dist/css/bootstrap.rtl.min.css";
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+// Font Awesome
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+// custom styles
+// css reset
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/***** change border color to suit your needs *****/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    font-family: "IRANSansWeb", sans-serif;
+}
+
+/***** header *****/
+.navigate-link .nav-item {
+    margin-right: 2.5rem;
+}
+
+.navigate-support .nav-item {
+    margin-left: 5rem;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-top .nav-link {
+    color: black;
+}
+
+.side-nav .side-logo a,
+.logo a,
+.side-logo a {
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
+    color: tomato;
+}
+
+.link-sing-up a,
+.link-basket a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "IRANSansWeb_Medium",sans-serif;
+}
+
+.search-box-icon i {
+    padding: 20px 0;
+    font-size: 1.3rem;
+}
+
+.link-basket,
+.link-sing-up {
+    height: 50px;
+    padding: 15px 15px;
+}
+
+/***** category menu *****/
+.category-menu {
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.btn.btn-light {
+    width: 10rem;
+}
+
+.category-menu .dropdown:hover ul {
+    display: block;
+    border: none;
+}
+
+.category-menu .dropdown-menu li a.dropdown-item {
+    text-align: center;
+}
+
+/***** footer *****/
+.footer-wrapper {
+    height: auto;
+    margin-top: auto;
+}
+.footer-top{
+    height: 200px;
+    background-color: #F8F9FA;
+}
+
+.footer-down{
+
+    background-color: #F8F9FA;
+}
+
+.footer-access-link,
+.footer-social-link div{
+    margin:auto;
+}
+.footer-social-link .fa-twitter ,
+.footer-social-link .fa-facebook ,
+.footer-social-link  .fa-instagram{
+    color: #000000;
+    font-size: 1.7rem;
+}
+
+.footer-access-link a{
+    text-decoration: none;
+    color: #000000;
+}
+/***** side navigation category *****/
+
+.side-nav {
+    /*display: none;*/
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    transition: all 0.2s;
+    padding-top: 60px;
+}
+
+.side-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: all 0.2s;
+}
+
+.side-nav a:hover {
+    color: #f1f1f1;
+}
+
+.side-nav .close_btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.nav-link-side-item a {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.sub-header-responsive,
+.side-nav-btn {
+    display: none;
+}
+
+.side-nav .list-group a {
+    font-size: 1.1rem;
+    border-bottom: none;
+    padding: 10px 12px 8px;
+}
+
+/***** banner-top *****/
+
+.banner-top .col{
+    display: flex;
+    justify-content: center;
+}
+
+/***** Discounted products products *****/
+
+.price-off-image img {
+    width: 140px;
+    height: 140px;
+}
+
+.custom-card-body .off-value{
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color:tomato;
+}
+
+/***** most-visited products *****/
+/***** best-selling products *****/
+
+.best-selling-products-title,
+.most-visited-products-title {
+    background-color: #2d89ef;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+
+/***** product card *****/
+
+.custom-card .product-img img{
+    height:306px;
+}
+
+.swiper-slide .card {
+    border:none;
+}
+.swiper-slide .card img{
+    height: 260px;
+}
+.product-card-details{
+    height: 50px;
+}
+.custom-card-price-unit{
+    color: tomato;
+}
+.product-card-details a:hover{
+    background-color: #FFFFFF;
+    border: 2px solid tomato;
+}
+
+/***** swiper *****/
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    //display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    //align-items: center;
+}
+
+.swiper-wrapper {
+    margin-bottom: 2rem;
+}
+
+.swiper-slide {
+    display: block;
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+}
+.swiper-best-selling .swiper-slide .card,
+.swiper-most-visited .swiper-slide .card{
+    width: 18rem;
+}
+
+/***** media query *****/
+
+@media screen and (max-height: 450px) {
+    .side-nav {
+        padding-top: 15px;
+    }
+
+    .side-nav a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .category-menu {
+        display: none;
+    }
+}
+
+@media (max-width:576.98px) {
+
+    .side-nav-btn {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-top,
+    .sub-header-right .col-1,
+    .sub-header-right {
+        display: none;
+    }
+
+    .sub-header-responsive {
+        display: flex;
+    }
+
+
+
+
+}
+
+@media screen and (max-width:300px) {
+
+    .sub-header-responsive .link-basket,
+    .sub-header-responsive .link-sing-up {
+        font-size: 0.9rem;
+        padding: 15px 15px;
+    }
+    .footer-access-link div{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .footer-access-link a{
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .sub-header-right .logo a {
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .nav-top {
+        .navigate-link .nav-item {
+            margin-right: 5px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .nav-top {
+        .navigate-link .nav-item {
+            margin-right: 2px;
+        }
+    }
+}
