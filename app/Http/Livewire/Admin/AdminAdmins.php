@@ -34,12 +34,12 @@ class AdminAdmins extends Component
             return view('errors_custom.model_not_found');
         }
     }
-    
+
     public function render()
     {
         return view('livewire.admin.admin-admins')
             ->extends('admin.include.master')
-            .section('admin_main')
-            ->with(['admins'=> Admin::paginate(10)]);
+            ->section('admin_main')
+            ->with(['admins'=> Admin::paginate(5)]);
     }
 }

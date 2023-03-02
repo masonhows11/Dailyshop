@@ -54,6 +54,6 @@ class AdminUsers extends Component
         return view('livewire.admin.admin-users')
             ->extends('admin.include.master')
             ->section('admin_main')
-            ->with(['users' => User::paginate(10)]);
+            ->with(['users' => User::paginate(8)]);
     }
 }

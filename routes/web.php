@@ -14,6 +14,7 @@ use App\Http\Livewire\Admin\AdminProfile;
 use App\Http\Livewire\Admin\AdminRoles;
 use App\Http\Livewire\Admin\AdminTag;
 use App\Http\Livewire\Admin\AdminUsers;
+use App\Http\Livewire\Admin\AdminAdmins;
 use App\Http\Livewire\Admin\ListUsersForPerm;
 use App\Http\Livewire\Admin\ListUsersForRole;
 use Illuminate\Support\Facades\Route;
@@ -38,7 +39,7 @@ Route::get('/storage-link',function(){
 // admin routes
 
 Route::prefix('admin')->group(function () {
-    
+
     Route::get('/login/form', [AdminAuthController::class, 'loginAdminForm'])->name('admin.login.form');
     Route::post('/login', [AdminAuthController::class, 'loginAdmin'])->name('admin.login');
     Route::get('/validate/mobile/form', [AdminValidateController::class, 'validateMobileForm'])->name('admin.validate.mobile.form');
@@ -62,6 +63,11 @@ Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_a
 Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
     Route::get('/users', AdminUsers::class)->name('users');
 });
+// admins
+Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
+    Route::get('/admins', AdminAdmins::class)->name('admins');
+});
+
 
 // crud roles
 Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {

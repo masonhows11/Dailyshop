@@ -34,25 +34,25 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @isset($users)
-                        @foreach($users as $user)
+                    @isset($admins)
+                        @foreach($admins as $admin)
 
                             <tr class="text-center">
-                                <td>{{ $user->id }}</td>
-                                <td>{{ $user->name }}</td>
-                                @if($user->hasRole('admin'))
+                                <td>{{ $admin->id }}</td>
+                                <td>{{ $admin->name }}</td>
+                                @if($admin->hasRole('admin'))
                                 @else
                                     <td class="mb-3">
                                         <a href="javascript:void(0)"
-                                           wire:click.prevent="deleteConfirmation({{ $user->id }})">
+                                           wire:click.prevent="deleteConfirmation({{ $admin->id }})">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>
                                     <td class="mb-3">
-                                        <a href="#" wire:click.prevent="activeUser({{ $user->id }})"
+                                        <a href="javascript:void(0)"
                                            class="btn
-                                        {{ $user->banned == 0 ? 'btn-success' : 'btn-danger' }} btn-sm mb-3">
-                                            {{ $user->banned == 0 ? 'فعال' : 'غیر فعال' }}
+                                        {{ $admin->code_verified_at == null ? 'btn-success' : 'btn-danger' }} btn-sm mb-3">
+                                            {{ $admin->code_verified_at == 0 ? 'فعال' : 'غیر فعال' }}
                                         </a>
                                     </td>
                                 @endif
@@ -65,7 +65,7 @@
             </div>
 
             <div class="col-xl-7 col-lg-7 col-md-7 mt-5">
-                {{ $users->links() }}
+                {{ $admins->links() }}
             </div>
 
         </div>
