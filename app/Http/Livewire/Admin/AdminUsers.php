@@ -11,6 +11,7 @@ class AdminUsers extends Component
     use WithPagination;
 
     protected $paginationTheme = 'bootstrap';
+    public $delete_id;
     public $stateUser = true;
 
     public function activeUser($id)
@@ -27,17 +28,32 @@ class AdminUsers extends Component
         }
     }
 
-    public function deleteUser($id)
+    // step 1 : confirm delete alert
+    public function deleteConfirmation($id)
     {
-        User::destroy($id);
-        session()->flash('success', 'کاربر مورد نظر با موفقیت حذف شد');
+        $this->delete_id = $id;
+        $this->dispatchBrowserEvent('show-delete-confirmation');
+    }
+    // step 2 : add confirm listener
+    protected $listeners = [
+        'deleteConfirmed' => 'deleteUser',
+    ];
+    // step 3 : delete model on listener
+    public function deleteUser()
+    {
+        try {
+            User::destroy($this->delete_id);
+            session()->flash('success', 'کاربر مورد نظر با موفقیت حذف شد');
+        }catch (\Exception $ex){
+            return view('errors_custom.model_not_found');
+        }
     }
 
     public function render()
     {
         return view('livewire.admin.admin-users')
-            ->extends('dash.include.master')
-            ->section('dash_main_content')
-            ->with(['users' => User::paginate(5)]);
+            ->extends('admin.include.master')
+            ->section('admin_main')
+            ->with(['users' => User::paginate(10)]);
     }
 }

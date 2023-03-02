@@ -38,6 +38,7 @@ Route::get('/storage-link',function(){
 // admin routes
 
 Route::prefix('admin')->group(function () {
+    
     Route::get('/login/form', [AdminAuthController::class, 'loginAdminForm'])->name('admin.login.form');
     Route::post('/login', [AdminAuthController::class, 'loginAdmin'])->name('admin.login');
     Route::get('/validate/mobile/form', [AdminValidateController::class, 'validateMobileForm'])->name('admin.validate.mobile.form');

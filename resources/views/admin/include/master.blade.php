@@ -35,6 +35,6 @@
         </div>
     </div>
    @include('admin.include.scripts')
-   @stack('scripts')
+   @stack('dash_custom_scripts')
 </body>
 </html>
