@@ -42,18 +42,18 @@
                                 <td><div>{{ $admin->id }}</div></td>
                                 <td><div>{{ $admin->name }}</div></td>
                                 @if($admin->hasRole('admin'))
-                                    <td class="custom-deactive">
-                                        <div>
+                                    <td>
+                                        <div class="custom-deactive">
                                             دسترسی ندارید
                                         </div>
                                     </td>
-                                    <td class="">
+                                    <td>
                                         <div class="custom-deactive">
                                             دسترسی ندارید
                                         </div>
                                     </td>
                                 @else
-                                    <td class="">
+                                    <td>
                                         <div>
                                             <a href="javascript:void(0)"
                                                wire:click.prevent="deleteConfirmation({{ $admin->id }})">
@@ -61,10 +61,10 @@
                                             </a>
                                         </div>
                                     </td>
-                                    <td class="">
+                                    <td >
                                         <div class="rounded
-                                        {{ $admin->code_verified_at == null ? 'custom-active' : 'custom-deactive' }}">
-                                            {{ $admin->code_verified_at == null ? 'فعال' : 'غیر فعال' }}
+                                        {{ $admin->code_verified_at == null ? 'custom-deactive' : 'custom-active' }}">
+                                            {{ $admin->code_verified_at == null ? __('messages.deactive') : __('messages.active') }}
                                         </div>
                                     </td>
                                 @endif
