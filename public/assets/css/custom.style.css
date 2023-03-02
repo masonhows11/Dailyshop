@@ -54,6 +54,7 @@
 }
 
 /************ users section */
+/************ admins section */
 .admin-list-users .list-content {
     height: 680px;
 }
@@ -67,7 +68,20 @@
     color: tomato;
     font-size: 1.2rem;
 }
+.admin-list-users .list-content tbody tr td div , a {
+    margin-top:5px;
+}
+.admin-list-users .list-content .custom-active{
+    padding:2px 0;
+    color:#0f5132;
+    font-size: 1.2rem;
 
+}
+.admin-list-users .list-content .custom-deactive{
+    padding:2px 0;
+    color:#842029;
+    font-size: 1.2rem;
+}
 /************ category section */
 .sample-section-create label,
 .tag-section-create label,

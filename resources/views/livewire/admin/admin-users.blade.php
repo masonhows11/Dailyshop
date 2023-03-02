@@ -1,5 +1,5 @@
 <div>
-    @section('dash_page_title')
+    @section('admin_title')
         مدیریت کاربران
     @endsection
     <div class="container">

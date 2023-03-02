@@ -1,5 +1,5 @@
 <div>
-    @section('dash_page_title')
+    @section('admin_title')
         مدیریت مدیران
     @endsection
     <div class="container">
@@ -24,6 +24,7 @@
         <div class="row admin-list-users d-flex justify-content-center align-content-center align-items-center">
 
             <div class="col-xl-7 col-lg-7 col-md-7 bg-white rounded-3 list-content">
+
                 <table class="table">
                     <thead>
                     <tr class="text-center">
@@ -38,22 +39,33 @@
                         @foreach($admins as $admin)
 
                             <tr class="text-center">
-                                <td>{{ $admin->id }}</td>
-                                <td>{{ $admin->name }}</td>
+                                <td><div>{{ $admin->id }}</div></td>
+                                <td><div>{{ $admin->name }}</div></td>
                                 @if($admin->hasRole('admin'))
-                                @else
-                                    <td class="mb-3">
-                                        <a href="javascript:void(0)"
-                                           wire:click.prevent="deleteConfirmation({{ $admin->id }})">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
+                                    <td class="custom-deactive">
+                                        <div>
+                                            دسترسی ندارید
+                                        </div>
                                     </td>
-                                    <td class="mb-3">
-                                        <a href="javascript:void(0)"
-                                           class="btn
-                                        {{ $admin->code_verified_at == null ? 'btn-success' : 'btn-danger' }} btn-sm mb-3">
-                                            {{ $admin->code_verified_at == 0 ? 'فعال' : 'غیر فعال' }}
-                                        </a>
+                                    <td class="">
+                                        <div class="custom-deactive">
+                                            دسترسی ندارید
+                                        </div>
+                                    </td>
+                                @else
+                                    <td class="">
+                                        <div>
+                                            <a href="javascript:void(0)"
+                                               wire:click.prevent="deleteConfirmation({{ $admin->id }})">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <div class="rounded
+                                        {{ $admin->code_verified_at == null ? 'custom-active' : 'custom-deactive' }}">
+                                            {{ $admin->code_verified_at == null ? 'فعال' : 'غیر فعال' }}
+                                        </div>
                                     </td>
                                 @endif
                             </tr>
