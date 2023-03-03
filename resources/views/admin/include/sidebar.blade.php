@@ -143,7 +143,7 @@
                             </a>
                         </div>
                         <div class="menu-item">
-                            <a class="menu-link" href="#">
+                            <a class="menu-link" href="{{ route('admin.role.list.users') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -151,7 +151,7 @@
                             </a>
                         </div>
                         <div class="menu-item">
-                            <a class="menu-link" href="#">
+                            <a class="menu-link" href="{{ route('admin.perm.list.users') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
