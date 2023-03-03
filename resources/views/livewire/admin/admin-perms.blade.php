@@ -60,7 +60,7 @@
                                     <td>{{ $perm->id }}</td>
                                     <td>{{ $perm->name }}</td>
                                     <td class="mb-3">
-                                        <a href="#" wire:click.prevent="deletePerm({{ $perm->id }})">
+                                        <a href="#" wire:click.prevent="deleteConfirmation({{ $perm->id }})">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>
@@ -78,3 +78,22 @@
             </div>
         </div>
 </div>
+@push('dash_custom_scripts')
+    <script type="text/javascript">
+        window.addEventListener('show-delete-confirmation',event => {
+            Swal.fire({
+                title: 'آیا مطمئن هستید این ایتم حذف شود؟',
+                icon: 'error',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'بله حذف کن!',
+                cancelButtonText: 'خیر',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Livewire.emit('deleteConfirmed')
+                }
+            });
+        })
+    </script>
+@endpush

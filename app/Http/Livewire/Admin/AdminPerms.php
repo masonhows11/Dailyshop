@@ -10,6 +10,7 @@ class AdminPerms extends Component
 {
     public $name;
     public $perm_id;
+    public $delete_id;
     public $edit_mode = false;
 
     protected function rules()
@@ -53,11 +54,19 @@ class AdminPerms extends Component
 
     }
 
-    public function deletePerm($id)
+    public function deleteConfirmation($id)
+    {
+        $this->delete_id = $id;
+        $this->dispatchBrowserEvent('show-delete-confirmation');
+    }
+    protected $listeners = [
+        'deleteConfirmed'=> 'deletePerm'
+    ];
+    public function deletePerm()
     {
         try {
             app()->make(\Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
-            Permission::destroy($id);
+            Permission::destroy($this->delete_id);
             session()->flash('success', 'نقش مورد نظر با موفقیت حذف شد');
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');

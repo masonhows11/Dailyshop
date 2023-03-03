@@ -14,6 +14,7 @@ class AdminRoles extends Component
     protected $paginationTheme = 'bootstrap';
     public $name;
     public $role_id;
+    public $delete_id;
     public $edit_mode = false;
     protected function rules()
     {
@@ -49,10 +50,19 @@ class AdminRoles extends Component
         }
     }
 
-    public function deleteRole($id)
+
+    public function deleteConfirmation($id)
+    {
+        $this->delete_id = $id;
+        $this->dispatchBrowserEvent('show-delete-confirmation');
+    }
+    protected $listeners = [
+      'deleteConfirmed'=> 'deleteRole'
+    ];
+    public function deleteRole()
     {
         try {
-            Role::destroy($id);
+            Role::destroy($this->delete_id);
             session()->flash('success', 'نقش مورد نظر با موفقیت حذف شد');
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');
