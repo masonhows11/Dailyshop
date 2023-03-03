@@ -110,14 +110,24 @@
         })
     </script>
     <script>
-        window.addEventListener('show-result',({detail:{type,message}})=>{
-            Toastify({
-                text: message,
-                className: "type",
-                style: {
-                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top',
+                showConfirmButton: false,
+                showCloseButton: true,
+                timer: 5000,
+                timerProgressBar:true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
                 }
-            }).showToast();
-        })
+            });
+            window.addEventListener('show-result',({detail:{type,message}})=>{
+                Toast.fire({
+                    icon:type,
+                    title:message
+                })
+            })
+
     </script>
 @endpush
