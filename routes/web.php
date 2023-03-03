@@ -79,6 +79,8 @@ Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_a
     Route::get('/roles/assign/form', [AdminRoleAssignController::class, 'create'])->name('roles.assign.form');
     Route::post('/roles/assign', [AdminRoleAssignController::class, 'store'])->name('roles.assign');
 });
+
+
 // crud perms
 Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
     Route::get('/perms', AdminPerms::class)->name('perms');

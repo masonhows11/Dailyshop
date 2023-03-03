@@ -1,4 +1,17 @@
-
+/* general styles */
+.admin-lng-list .fa-trash,
+.admin-tag-list .fa-trash,
+.admin-list-roles .fa-trash,
+.admin-list-users .fa-trash{
+    color: tomato;
+    font-size: 1.3rem;
+}
+.admin-lng-list .fa-edit,
+.admin-tag-list .fa-edit,
+.admin-list-roles .fa-edit{
+    color: lightskyblue;
+    font-size: 1.3rem;
+}
 
 .alert-profile {
     height: 50px;
@@ -68,14 +81,14 @@
     color: tomato;
     font-size: 1.2rem;
 }
-
+.admin-list-roles .custom-active,
 .admin-list-users .list-content .custom-active{
     padding:2px 0;
     color:seagreen;
     font-weight: bold;
     font-size: 1.1rem;
-
 }
+.admin-list-roles .custom-deactive,
 .admin-list-users .list-content .custom-deactive{
     padding:2px 0;
     color:tomato;

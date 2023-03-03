@@ -1,5 +1,5 @@
 <div>
-    @section('dash_page_title')
+    @section('admin_title')
         نقش ها
     @endsection
     <div class="container">
@@ -60,14 +60,24 @@
                                 <td>{{ $role->id }}</td>
                                 <td>{{ $role->name }}</td>
                                 @if($role->name == 'admin')
+                                    <td>
+                                        <div class="custom-deactive">
+                                            دسترسی ندارید
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="custom-deactive">
+                                            دسترسی ندارید
+                                        </div>
+                                    </td>
                                 @else
-                                    <td class="mb-3">
-                                        <a href="#" wire:click.prevent="deleteRole({{ $role->id }})">
+                                    <td class="">
+                                        <a href="javascript:void(0)" wire:click.prevent="deleteRole({{ $role->id }})">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>
-                                    <td class="mb-3">
-                                        <a href="#" wire:click="editRole({{ $role->id }})" class="btn btn-sm mb-3">
+                                    <td class="">
+                                        <a href="javascript:void(0)" wire:click="editRole({{ $role->id }})">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                     </td>

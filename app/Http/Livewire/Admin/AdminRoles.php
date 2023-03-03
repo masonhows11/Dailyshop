@@ -70,8 +70,8 @@ class AdminRoles extends Component
     public function render()
     {
         return view('livewire.admin.admin-roles')
-            ->extends('dash.include.master')
-            ->section('dash_main_content')
+            ->extends('admin.include.master')
+            ->section('admin_main')
             ->with(['roles' => Role::paginate(10)]);
     }
 }

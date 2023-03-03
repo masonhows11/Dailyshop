@@ -1,5 +1,5 @@
 <div>
-    @section('dash_page_title')
+    @section('admin_title')
         مجوزها
     @endsection
         <div class="container">
@@ -65,7 +65,7 @@
                                         </a>
                                     </td>
                                     <td class="mb-3">
-                                        <a href="#" wire:click="editPerm({{ $perm->id }})" class="btn btn-sm mb-3">
+                                        <a href="#" wire:click="editPerm({{ $perm->id }})" >
                                             <i class="fa fa-edit"></i>
                                         </a>
                                     </td>
