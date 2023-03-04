@@ -29,7 +29,10 @@ class AdminAdmins extends Component
     {
         try {
             Admin::destroy($this->delete_id);
-            session()->flash('success', 'کاربر مورد نظر با موفقیت حذف شد');
+            $this->dispatchBrowserEvent('show-result',
+                ['type'=>'success',
+                    'message'=>'نقش مورد نظر با موفقیت حذف شد']);
+           // session()->flash('success', 'کاربر مورد نظر با موفقیت حذف شد');
         }catch (\Exception $ex){
             return view('errors_custom.model_not_found');
         }
