@@ -26,7 +26,7 @@
                 <form wire:submit.prevent="storeRole">
                     <div class="mb-3 mt-3">
                         <label for="name" class="form-label">نام نقش :</label>
-                        <input type="text" wire:model.lazy="name"
+                        <input type="text" wire:model.defer="name"
                                class="form-control"
                                id="name">
                     </div>

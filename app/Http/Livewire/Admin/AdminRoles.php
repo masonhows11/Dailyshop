@@ -35,7 +35,9 @@ class AdminRoles extends Component
         if($this->edit_mode == false){
             try {
                 Role::create(['name' => $this->name]);
-                session()->flash('success', 'نقش مورد نظر با موفقیت ایجاد شد');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type'=>'success',
+                        'message'=>'نقش مورد نظر با موفقیت ایجاد شد']);
                 $this->name = '';
             }catch (\Exception $ex){
                 return view('errors_custom.model_store_error');
@@ -46,7 +48,10 @@ class AdminRoles extends Component
                 ->update(['name'=>$this->name]);
             $this->name = '';
             $this->edit_mode = false;
-            session()->flash('success', 'نقش مورد نظر با موفقیت بروز رسانی شد');
+            $this->dispatchBrowserEvent('show-result',
+                ['type'=>'success',
+                    'message'=>'نقش مورد نظر با موفقیت یروز رسانی شد']);
+           // session()->flash('success', 'نقش مورد نظر با موفقیت بروز رسانی شد');
         }
     }
 
@@ -66,7 +71,6 @@ class AdminRoles extends Component
             $this->dispatchBrowserEvent('show-result',
                 ['type'=>'success',
                 'message'=>'نقش مورد نظر با موفقیت حذف شد']);
-           // session()->flash('success', 'نقش مورد نظر با موفقیت حذف شد');
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');
         }
