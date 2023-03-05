@@ -73,6 +73,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_a
 Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
     Route::get('/roles', AdminRoles::class)->name('roles');
 });
+
 // assign roles
 Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
     Route::get('/roles/list/users', ListUsersForRole::class)->name('role.list.users');
