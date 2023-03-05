@@ -16,7 +16,7 @@ class AdminPerms extends Component
     protected function rules()
     {
         return [
-            'name' => ['required', 'unique:roles,name', 'min:2', 'max:30'],
+            'name' => ['required', 'unique:permissions,name', 'min:2', 'max:30'],
         ];
     }
 
@@ -36,7 +36,9 @@ class AdminPerms extends Component
             if ($this->edit_mode == false)
             {
                 Permission::create(['name' => $this->name]);
-                session()->flash('success', 'نقش مورد نظر با موفقیت ایجاد شد');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type'=>'success',
+                        'message'=>'مجوز مورد نظر با موفقیت ایجاد شد']);
                 $this->name = '';
             }
             elseif ($this->edit_mode == true)
@@ -46,7 +48,9 @@ class AdminPerms extends Component
                     ->update(['name' => $this->name]);
                 $this->name = '';
                 $this->edit_mode = false;
-                session()->flash('success', 'نقش مورد نظر با موفقیت بروز رسانی شد');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type'=>'success',
+                        'message'=>'مجوز مورد نظر با موفقیت بروز رسانی شد']);
             }
         } catch (\Exception $ex) {
             return view('errors_custom.model_store_error');
@@ -67,7 +71,9 @@ class AdminPerms extends Component
         try {
             app()->make(\Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
             Permission::destroy($this->delete_id);
-            session()->flash('success', 'نقش مورد نظر با موفقیت حذف شد');
+            $this->dispatchBrowserEvent('show-result',
+                ['type'=>'success',
+                    'message'=>'مجوز مورد نظر با موفقیت حذف شد']);
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');
         }

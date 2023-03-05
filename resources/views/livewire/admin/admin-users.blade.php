@@ -4,22 +4,7 @@
     @endsection
     <div class="container">
 
-        <div class="row d-flex justify-content-center admin-user-alert">
-            @if(session()->has('success'))
-                <div
-                    class="col-xl-7 col-lg-7 col-md-7 alert alert-success alert-dismissible alert-component text-center">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>{{ session('success') }}</strong>
-                </div>
-            @endif
-            @if(session()->has('error'))
-                <div
-                    class="col-xl-7 col-lg-7 col-md-7 alert alert-danger alert-dismissible alert-component text-center">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>{{ session('error') }}</strong>
-                </div>
-            @endif
-        </div>
+
 
         <div class="row admin-list-users d-flex justify-content-center align-content-center align-items-center">
 

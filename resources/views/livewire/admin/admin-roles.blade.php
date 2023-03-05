@@ -4,7 +4,7 @@
     @endsection
     <div class="container">
 
-        <div class="row d-flex justify-content-center admin-role-alert">
+       {{-- <div class="row d-flex justify-content-center admin-section-alert">
             @if(session()->has('success'))
                 <div
                     class="col-xl-7 col-lg-7 col-md-7 alert alert-success alert-dismissible alert-component text-center">
@@ -19,7 +19,7 @@
                     <strong>{{ session('error') }}</strong>
                 </div>
             @endif
-        </div>
+        </div>--}}
 
         <div class="row d-flex justify-content-center admin-create-new-role">
             <div class="col-xl-7 col-lg-7 col-md-7">
@@ -128,6 +128,5 @@
                     title:message
                 })
             })
-
     </script>
 @endpush
