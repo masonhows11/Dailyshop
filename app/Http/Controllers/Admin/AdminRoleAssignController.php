@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 
@@ -16,7 +15,7 @@ class AdminRoleAssignController extends Controller
         try {
             $user = Admin::findOrFail($request->user_id);
             $roles = Role::all();
-            return view('dash.role_assign.role_assign')
+            return view('admin.role_assign.role_assign')
                 ->with(['user' => $user, 'roles' => $roles]);
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');

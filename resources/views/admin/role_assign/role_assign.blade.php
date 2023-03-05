@@ -1,14 +1,10 @@
-@extends('dash.include.master')
-@section('dash_page_title')
+@extends('admin.include.master')
+@section('admin_title')
     تخصیص نقش
 @endsection
-@section('dash_main_content')
+@section('admin_main')
     <div class="container">
-        <div class="row d-flex admin-role-assign-form-alert justify-content-center">
-            <div class="col-xl-7 col-lg-7 col-md-7">
-                @include('dash.include.alert')
-            </div>
-        </div>
+
         <div class="row d-flex justify-content-center  admin-role-assign-form">
             <div class="col-xl-7 col-lg-7 col-md-7">
                 <form action="{{ route('admin.roles.assign') }}" method="post">
@@ -41,3 +37,23 @@
         </div>
     </div>
 @endsection
+@push('dash_custom_scripts')
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+
+    Toast.fire({
+        icon: 'success',
+        title: 'Signed in successfully'
+    })
+</script>
+@endpush
