@@ -1,5 +1,5 @@
 <div>
-    @section('dash_page_title')
+    @section('admin_title')
         تخصیص نقش ها
     @endsection
         <div class="container">
