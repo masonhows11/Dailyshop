@@ -77,11 +77,11 @@ class AdminProfile extends Component
         $this->validate();
         $admin = Auth::guard('admin')->user();
 
-        if($this->image_path != null){
-            // create image name
+        if($admin->image_path == null){
+            // create image name as new
             $image_name_save = 'UIMG' . date('YmdHis') . uniqid('', true) . '.jpg';
             // save image with given name
-            $this->image_path->storeAs('admin', $image_name_save, 'public');
+            $this->image_path->storeAs('public/admin', $image_name_save);
             if ($admin->image_path != null) {
                 if (Storage::disk('public')->exists('admin/' . $admin->image_path)) {
                     Storage::disk('public')->delete('admin/' . $admin->image_path);
