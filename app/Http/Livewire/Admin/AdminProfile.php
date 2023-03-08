@@ -21,7 +21,7 @@ class AdminProfile extends Component
 
     public function mount()
     {
-        $info = Auth::user();
+        $info = Auth::guard('admin')->user();
         $this->name = $info->name;
         $this->first_name = $info->first_name;
         $this->last_name = $info->last_name;
@@ -35,13 +35,17 @@ class AdminProfile extends Component
             'image_path' =>
                 ['nullable','mimes:png,jpg,jpeg', 'max:1999', 'dimensions:min_width=300,min_height=300'],
             'name' =>
-                ['required', 'min:3', 'max:20', Rule::unique('users')->ignore(Auth::id())],
+                ['required', 'min:3', 'max:20', Rule::unique('admins')
+                    ->ignore(Auth::guard('admin')->id())],
             'first_name' =>
-                ['required', 'min:3', 'max:20', Rule::unique('users')->ignore(Auth::id())],
+                ['required', 'min:3', 'max:20', Rule::unique('admins')
+                    ->ignore(Auth::guard('admin')->id())],
             'last_name' =>
-                ['required', 'min:3', 'max:20', Rule::unique('users')->ignore(Auth::id())],
+                ['required', 'min:3', 'max:20', Rule::unique('admins')
+                    ->ignore(Auth::guard('admin')->id())],
             'email' =>
-                ['nullable','email', Rule::unique('users')->ignore(Auth::id())],
+                ['nullable','email', Rule::unique('admins')
+                    ->ignore(Auth::guard('admin')->id())],
         ];
     }
 
@@ -71,10 +75,9 @@ class AdminProfile extends Component
     public function update()
     {
         $this->validate();
-        $admin = Auth::user();
+        $admin = Auth::guard('admin')->user();
 
         if($this->image_path != null){
-
             // create image name
             $image_name_save = 'UIMG' . date('YmdHis') . uniqid('', true) . '.jpg';
             // save image with given name
