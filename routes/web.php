@@ -92,6 +92,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_a
     Route::get('/perms/assign/form', [AdminPermAssignController::class, 'create'])->name('perms.assign.form');
     Route::post('/perms/assign', [AdminPermAssignController::class, 'store'])->name('perms.assign');
 });
+
 // categories
 Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
     Route::get('/category/index', AdminCategory::class)->name('category.list');

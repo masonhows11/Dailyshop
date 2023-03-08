@@ -4,7 +4,6 @@
     @endsection
     <div class="container">
         <div class="row admin-list-users d-flex justify-content-center align-content-center align-items-center">
-
             <div class="col-xl-7 col-lg-7 col-md-7 bg-white rounded-3 list-content">
                 <table class="table">
                     <thead>
@@ -32,11 +31,9 @@
                     </tbody>
                 </table>
             </div>
-
             <div class="col-xl-7 col-lg-7 col-md-7 mt-5">
                 {{ $users->links() }}
             </div>
-
         </div>
     </div>
 </div>

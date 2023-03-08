@@ -4,7 +4,6 @@
 @endsection
 @section('admin_main')
     <div class="container">
-
         <div class="row d-flex justify-content-center  admin-role-assign-form">
             <div class="col-xl-7 col-lg-7 col-md-7">
                 <form action="{{ route('admin.roles.assign') }}" method="post">
@@ -36,12 +35,7 @@
             </div>
         </div>
     </div>
-
 @endsection
-
-
-
-
 @push('dash_custom_scripts')
     @if(session()->has('success'))
         <script>
