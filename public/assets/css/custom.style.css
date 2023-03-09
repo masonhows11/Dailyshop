@@ -106,7 +106,10 @@
     font-weight: bold;
     font-size: 1.2rem;
 }
-
+.no-categories,
+.category-content{
+ margin-top:30px;
+}
 .category-content ul li {
     list-style: none;
 }
@@ -123,6 +126,10 @@
 
 .item-category .item-category-title {
     width: 200px;
+    margin: auto 0;
+}
+.item-category-actions{
+    margin: auto 0;
 }
 
 .category-section-create label {

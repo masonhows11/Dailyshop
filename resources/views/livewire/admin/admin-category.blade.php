@@ -45,20 +45,24 @@
             <div class="col-xl-7 col-lg-7 col-sm-6 col-xs-10">
                 @if($categories->isEmpty())
                     <div
-                        class="alert d-flex justify-content-center border border-2 border-dark alert-light no-categories">
+                        class="alert d-flex justify-content-center border border-2 border-dark  no-categories">
                         <p class="text-center my-auto">دسته بندی وجود ندارد.</p>
                     </div>
                 @else
                     <div class="category-content">
                         @foreach($category_tree as $category)
                             <div id="accordion">
-                                <div class="card mt-4">
-                                    <div class="card-header item-category bg-secondary">
+
+                                <div class="card">
+
+                                    <div class="card-header item-category bg-white">
+
                                         <div class="item-category-title">
-                                            <a class="btn my-3 text-black" href="#collapse{{ $category->id }}"
+                                            <a class="btn my-auto text-black" href="#collapse{{ $category->id }}"
                                                data-bs-toggle="collapse"><h6>{{ $category->title_persian }}</h6></a>
                                         </div>
-                                        <div class="item-category-actions  my-5">
+
+                                        <div class="item-category-actions">
                                             @if($category->parent_id == null)
                                                 <a href="javascript:void(0)" wire:click.prevent="editCategory({{ $category->id}})" class="mx-4"><i class="fas fa-edit"></i></a>
                                                 <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})"><i class="fas fa-trash"></i></a>
@@ -69,7 +73,9 @@
                                             @endif
                                         </div>
                                     </div>
+
                                 </div>
+
                                 <div class="collapse show" id="collapse{{$category->id}}">
                                     @if(!$category->chlidren)
                                         @include('admin.category.child_category',['child'=>$category->children])
