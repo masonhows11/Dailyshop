@@ -3,7 +3,7 @@
         دسته بندی ها
     @endsection
     <div class="container-fluid">
-        
+
         <div class="row d-flex justify-content-center  mt-5 category-section-index">
 
             <!-- creat category -->
@@ -106,7 +106,7 @@
     <script>
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top',
+            position: 'top-end',
             showConfirmButton: false,
             showCloseButton: true,
             timer: 5000,

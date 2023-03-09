@@ -52,6 +52,7 @@ class AdminCategory extends Component
     public function storeCategory()
     {
         $this->validate();
+
         try {
             if ($this->edit_mode == false) {
                 // for create category
@@ -73,8 +74,8 @@ class AdminCategory extends Component
                 $this->parent = '';
 
                 $this->dispatchBrowserEvent('show-result',
-                    ['type'=>'success',
-                        'message'=>'مجوز مورد نظر با موفقیت حذف شد']);
+                    ['type' => 'success',
+                        'message' => 'مجوز مورد نظر با موفقیت حذف شد']);
 
             } else {
                 // for edit category
@@ -96,8 +97,8 @@ class AdminCategory extends Component
                 $this->parent = '';
 
                 $this->dispatchBrowserEvent('show-result',
-                    ['type'=>'success',
-                        'message'=>'مجوز مورد نظر با موفقیت حذف شد']);
+                    ['type' => 'success',
+                        'message' => 'مجوز مورد نظر با موفقیت حذف شد']);
                 return redirect()->to('/admin/category/index');
             }
 
@@ -106,9 +107,6 @@ class AdminCategory extends Component
         }
     }
 
-    protected $listeners = [
-        'deleteConfirmed' => 'deleteCategory',
-    ];
 
     public function deleteConfirmation($id)
     {
@@ -116,17 +114,27 @@ class AdminCategory extends Component
         $this->dispatchBrowserEvent('show-delete-confirmation');
     }
 
+    protected $listeners = [
+        'deleteConfirmed' => 'deleteCategory',
+    ];
+
     public function deleteCategory()
     {
+        $category = Category::findOrFail($this->delete_id);
+
         try {
-            $category = Category::findOrFail($this->delete_id);
             if ($category->parent_id == null) {
-                session()->flash('error', 'امکان حذف دسته بندی مورد نظر وجود ندارد');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type' => 'warning',
+                        'message' => 'امکان حذف دسته بندی مورد نظر وجود ندارد']);
+                return $this->redirect->to('/admin/category/list');
             } else {
                 $category->delete();
-                session()->flash('success', 'رکورد مورد نظر با موفقیت حذف شد');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type' => 'success',
+                        'message' => 'رکورد مورد نظر با موفقیت حذف ش']);
+                return $this->redirect->to('/admin/category/list');
             }
-
         } catch (\Exception $ex) {
             session()->flash('error', 'دسته بندی مورد نظر وجود ندارد');
         }
