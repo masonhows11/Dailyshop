@@ -77,11 +77,11 @@ class AdminProfile extends Component
         $this->validate();
         $admin = Auth::guard('admin')->user();
 
-        if($admin->image_path == null){
-            // create image name as new
+        if($this->image_path != null){
+            // create image name
             $image_name_save = 'UIMG' . date('YmdHis') . uniqid('', true) . '.jpg';
             // save image with given name
-            $this->image_path->storeAs('public/admin', $image_name_save);
+            $this->image_path->storeAs('admin', $image_name_save, 'public');
             if ($admin->image_path != null) {
                 if (Storage::disk('public')->exists('admin/' . $admin->image_path)) {
                     Storage::disk('public')->delete('admin/' . $admin->image_path);
@@ -96,6 +96,8 @@ class AdminProfile extends Component
         $admin->email = $this->email;
         $admin->save();
         session()->flash('success','بروز رسانی با موفقیت انجام شد.');
+        return redirect()->to('/admin/profile');
+
 
     }
 

@@ -37,6 +37,7 @@
         </div>
     </div>
 @endsection
+
 @if(session('success'))
     @push('dash_custom_scripts')
         <script>

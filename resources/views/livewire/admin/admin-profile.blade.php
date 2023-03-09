@@ -4,24 +4,12 @@
     @endsection
     <div class="container">
 
-        <div class="row alert-profile">
-            @if(session()->has('success'))
-            <div class=" alert alert-success alert-dismissible alert-component text-center">
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>{{ session('success') }}</strong>
-            </div>
-            @endif
-            @if(session()->has('error'))
-            <div class=" alert alert-danger alert-dismissible alert-component text-center">
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>{{ session('error') }}</strong>
-            </div>
-            @endif
-        </div>
 
         <div class="row admin-profile-info">
             <form wire:submit.prevent="update">
+
                 <div class="row">
+
                     <div class="col">
                         <div class="image-wrapper my-5 d-flex flex-column  align-items-center">
                             <div class="image-content   border border-3 rounded-3">
@@ -43,6 +31,7 @@
                             @enderror
                         </div>
                     </div>
+
                     <div class="col">
                         <div class="form-group my-5">
                             <label for="user" class="form-label">نام کاربری:</label>
@@ -93,3 +82,26 @@
         </div>
     </div>
 </div>
+
+@if(session('success'))
+    @push('dash_custom_scripts')
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: '{{ session('success') }}'
+            })
+        </script>
+    @endpush
+@endif
