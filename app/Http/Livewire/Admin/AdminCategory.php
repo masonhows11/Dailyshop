@@ -71,7 +71,10 @@ class AdminCategory extends Component
                 $this->title_persian = '';
                 $this->title_english = '';
                 $this->parent = '';
-                session()->flash('success', 'دسته بندی مورد نظر با موفقیت ذخیره شد.');
+
+                $this->dispatchBrowserEvent('show-result',
+                    ['type'=>'success',
+                        'message'=>'مجوز مورد نظر با موفقیت حذف شد']);
 
             } else {
                 // for edit category
@@ -91,7 +94,10 @@ class AdminCategory extends Component
                 $this->title_persian = '';
                 $this->title_english = '';
                 $this->parent = '';
-                session()->flash('success', 'دسته بندی مورد نظر با موفقیت بروز رسانی شد.');
+
+                $this->dispatchBrowserEvent('show-result',
+                    ['type'=>'success',
+                        'message'=>'مجوز مورد نظر با موفقیت حذف شد']);
                 return redirect()->to('/admin/category/index');
             }
 
@@ -167,8 +173,8 @@ class AdminCategory extends Component
     public function render()
     {
         return view('livewire.admin.admin-category')
-            ->extends('dash.include.master')
-            ->section('dash_main_content')
+            ->extends('admin.include.master')
+            ->section('admin_main')
             ->with(['category_tree' => Category::tree()->get()->toTree(),
                 'categories' => Category::all()]);
     }
