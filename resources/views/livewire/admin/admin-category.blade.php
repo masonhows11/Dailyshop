@@ -4,10 +4,10 @@
     @endsection
     <div class="container-fluid">
 
-        <div class="row d-flex justify-content-center  mt-5 category-section-index">
+        <div class="row   mt-5 category-section-index">
 
             <!-- creat category -->
-            <div class="col-lg-4 col-md-5  col-sm-5 col-xs-5  category-create">
+            <div class="col-sm category-create">
                 <form wire:submit.prevent="storeCategory">
                     <div class="mb-3 mt-3">
                         <label for="title" class="form-label">عنوان دسته بندی به فارسی :</label>
@@ -42,10 +42,9 @@
             </div>
 
             <!-- list categories -->
-            <div class="col-xl-7 col-lg-7 col-sm-6 col-xs-10">
+            <div class="col-sm">
                 @if($categories->isEmpty())
-                    <div
-                        class="alert d-flex justify-content-center border border-2 border-dark  no-categories">
+                    <div class="alert d-flex justify-content-center border border-2 border-dark  no-categories">
                         <p class="text-center my-auto">دسته بندی وجود ندارد.</p>
                     </div>
                 @else
@@ -55,7 +54,7 @@
 
                                 <div class="card">
 
-                                    <div class="card-header item-category bg-white">
+                                    <div class="card-header item-category bg-secondary">
 
                                         <div class="item-category-title">
                                             <a class="btn my-auto text-black" href="#collapse{{ $category->id }}"

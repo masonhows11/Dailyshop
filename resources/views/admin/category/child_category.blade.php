@@ -6,10 +6,10 @@
                 @if(count($category->children))
                     <a class="btn my-3" href="#collapse{{ $category->id }}" data-bs-toggle="collapse"><h6>{{ $category->title_persian }}</h6></a>
                 @else
-                    <a class="btn my-3" href="#collapse{{ $category->id }}" data-bs-toggle="collapse">{{ $category->title_persian }}</a>
+                    <a class="btn my-3" href="#collapse{{ $category->id }}" data-bs-toggle="collapse"><h6>{{ $category->title_persian }}</h6></a>
                 @endif
             </div>
-            <div class="item-category-actions my-4">
+            <div class="item-category-actions">
                 @if($category->parent_id == null)
                     <a href="javascript:void(0)" wire:click.prevent="editCategory({{$category->id}})" class="mx-4"><i class="fas fa-edit"></i></a>
                     <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})"><i class="fas fa-trash" ></i></a>
