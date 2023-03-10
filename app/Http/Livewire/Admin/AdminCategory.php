@@ -78,7 +78,17 @@ class AdminCategory extends Component
                         'message' => 'دسته بندی با موفقیت ایجاد شد']);
 
             } else {
-                // for edit category
+                // for update category
+                if($this->parent === $this->parent)
+                {
+
+                    $this->dispatchBrowserEvent('show-result',
+                            ['type' => 'warning',
+                            'message' => 'یک دسته بندی نمی تواند والد خودش باشد']);
+                    session()->flash('warning','یک دسته بندی نمی تواند والد خودش باشد');
+                    return redirect()->back();
+
+                }
                 if ($this->parent != null) {
                     Category::where('id', $this->category_id)
                         ->update([
@@ -97,7 +107,7 @@ class AdminCategory extends Component
                 $this->parent = '';
 
                 $this->dispatchBrowserEvent('show-result',
-                    ['type' => 'success',
+                        ['type' => 'success',
                         'message' => 'دسته بندی با موفقیت ایجاد شد']);
                 return redirect()->to('/admin/category/index');
             }
@@ -125,7 +135,7 @@ class AdminCategory extends Component
         try {
             if ($category->parent_id == null) {
                 $this->dispatchBrowserEvent('show-result',
-                    ['type' => 'warning',
+                       ['type' => 'warning',
                         'message' => 'امکان حذف دسته بندی مورد نظر وجود ندارد']);
                 return $this->redirect->to('/admin/category/list');
             } else {

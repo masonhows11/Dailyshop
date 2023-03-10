@@ -44,7 +44,8 @@
             <!-- list categories -->
             <div class="col-sm-6 category-list">
                 @if($categories->isEmpty())
-                    <div class="alert d-flex justify-content-center border border-1 border-secondary bg-white    no-categories">
+                    <div
+                        class="alert d-flex justify-content-center border border-1 border-secondary bg-white    no-categories">
                         <p class="text-center my-auto">دسته بندی وجود ندارد.</p>
                     </div>
                 @else
@@ -63,12 +64,22 @@
 
                                         <div class="item-category-actions">
                                             @if($category->parent_id == null)
-                                                <a href="javascript:void(0)" wire:click.prevent="editCategory({{ $category->id}})" class="mx-4"><i class="fas fa-edit"></i></a>
-                                                <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})"><i class="fas fa-trash"></i></a>
+                                                <a href="javascript:void(0)"
+                                                   wire:click.prevent="editCategory({{ $category->id}})" class="mx-4"><i
+                                                        class="fas fa-edit"></i></a>
+                                                <a href="javascript:void(0)"
+                                                   wire:click.prevent="deleteConfirmation({{ $category->id }})"><i
+                                                        class="fas fa-trash"></i></a>
                                             @else
-                                                <a href="javascript:void(0)" wire:click.prevent="editCategory({{ $category->id}})" class="mx-4"><i class="fas fa-edit"></i></a>
-                                                <a href="javascript:void(0)" wire:click.prevent="detachCategory({{ $category->id }})" class="mx-4"><i class="fa fa-unlink"></i></a>
-                                                <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})"><i class="fas fa-trash"></i></a>
+                                                <a href="javascript:void(0)"
+                                                   wire:click.prevent="editCategory({{ $category->id}})" class="mx-4"><i
+                                                        class="fas fa-edit"></i></a>
+                                                <a href="javascript:void(0)"
+                                                   wire:click.prevent="detachCategory({{ $category->id }})"
+                                                   class="mx-4"><i class="fa fa-unlink"></i></a>
+                                                <a href="javascript:void(0)"
+                                                   wire:click.prevent="deleteConfirmation({{ $category->id }})"><i
+                                                        class="fas fa-trash"></i></a>
                                             @endif
                                         </div>
                                     </div>
@@ -116,18 +127,39 @@
             showConfirmButton: false,
             showCloseButton: true,
             timer: 5000,
-            timerProgressBar:true,
+            timerProgressBar: true,
             didOpen: (toast) => {
                 toast.addEventListener('mouseenter', Swal.stopTimer)
                 toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
         });
-        window.addEventListener('show-result',({detail:{type,message}})=>{
+        window.addEventListener('show-result', ({detail: {type, message}}) => {
             Toast.fire({
-                icon:type,
-                title:message
+                icon: type,
+                title: message
             })
         })
 
     </script>
+    @if(session()->has('warning'))
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                showCloseButton: true,
+                timer: 5000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            });
+            Toast.fire({
+                icon: 'warning',
+                title:'{{ session()->get('warning') }}'
+            })
+
+        </script>
+    @endif
 @endpush
