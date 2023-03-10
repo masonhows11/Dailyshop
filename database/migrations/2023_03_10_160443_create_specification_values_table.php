@@ -13,19 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('specifications', function (Blueprint $table) {
+        Schema::create('specification_values', function (Blueprint $table) {
             $table->id();
             $table->string('title',125)->nullable();
+            $table->unsignedBigInteger('display_order')->nullable();
 
-            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('specification_id');
+            $table->foreign('specification_id')
+                ->references('id')
+                ->on('specifications')
+                ->onDelete('cascade')->onUpdate('cascade');
+
+            $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories')
                 ->onDelete('cascade')->onUpdate('cascade');
-
-            $table->string('specific_type')->nullable();
-            $table->boolean('has_option')->nullable();
-            $table->unsignedBigInteger('display_order')->nullable();
             $table->timestamps();
         });
     }
@@ -37,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('specifications');
+        Schema::dropIfExists('specification_values');
     }
 };
