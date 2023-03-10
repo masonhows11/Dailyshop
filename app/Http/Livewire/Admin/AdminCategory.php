@@ -79,16 +79,14 @@ class AdminCategory extends Component
 
             } else {
                 // for update category
-                if($this->parent === $this->parent)
+               /* if($this->parent === $this->parent)
                 {
-
                     $this->dispatchBrowserEvent('show-result',
                             ['type' => 'warning',
                             'message' => 'یک دسته بندی نمی تواند والد خودش باشد']);
                     session()->flash('warning','یک دسته بندی نمی تواند والد خودش باشد');
                     return redirect()->back();
-
-                }
+                }*/
                 if ($this->parent != null) {
                     Category::where('id', $this->category_id)
                         ->update([
@@ -170,17 +168,25 @@ class AdminCategory extends Component
     {
         $this->edit_mode = true;
         try {
-            $category = DB::table('categories')->where('id', $id)->first();
+            $category = DB::table('categories')
+                ->where('id', $id)
+                ->first();
             if ($category->parent_id == null) {
+
                 $this->title_persian = $category->title_persian;
                 $this->title_english = $category->title_english;
                 $this->category_id = $category->id;
-            } else {
+
+            } else  {
+
                 $this->title_persian = $category->title_persian;
                 $this->title_english = $category->title_english;
+                $this->category_id = $category->id;
                 $this->parent = $category->parent_id;
-                $this->category_id = $category->id;
+
+
             }
+
 
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');

@@ -26,15 +26,30 @@
                     @error('title_english')
                     <div class="alert alert-danger">{{ $message}}</div>
                     @enderror
+
+
                     <div class="mb-3 mt-3">
                         <label for="parent" class="form-label">انتخاب دسته بندی والد:</label>
-                        <select class="form-control" wire:model.lazy="parent" id="parent">
-                            <option value="null">فاقد دسته بندی</option>
-                            @foreach($categories as $item)
-                                <option value="{{ $item->id }}">{{ $item->title_persian }}</option>
-                            @endforeach
-                        </select>
+                        @if($edit_mode != true)
+                            create mode
+                            <select class="form-control" wire:model.lazy="parent" id="parent">
+                                <option value="null">فاقد دسته بندی</option>
+                                @foreach($categories as $item)
+                                    <option value="{{ $item->id }}">{{ $item->title_persian }}</option>
+                                @endforeach
+                            </select>
+                        @else
+                            edit mode
+                            <select class="form-control" wire:model.lazy="parent" id="parent">
+                              <option value="null">فاقد دسته بندی</option>
+                                @foreach($categories as $item)
+                                        <option value="{{ $item->id }}">{{ $item->title_persian }}</option>
+                                @endforeach
+                            </select>
+                        @endif
                     </div>
+
+
                     <div class="mb-3 mt-3">
                         <button type="submit" class="btn btn-success">ذخیره</button>
                     </div>
@@ -133,6 +148,7 @@
                 toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
         });
+
         window.addEventListener('show-result', ({detail: {type, message}}) => {
             Toast.fire({
                 icon: type,
@@ -140,26 +156,14 @@
             })
         })
 
+        @if(session()->has('warning'))
+        Toast.fire({
+            icon: 'warning',
+            title: '{{ session()->get('warning') }}'
+        })
+        @endif
     </script>
-    @if(session()->has('warning'))
-        <script>
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                showCloseButton: true,
-                timer: 5000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            });
-            Toast.fire({
-                icon: 'warning',
-                title:'{{ session()->get('warning') }}'
-            })
 
-        </script>
-    @endif
+
+
 @endpush
