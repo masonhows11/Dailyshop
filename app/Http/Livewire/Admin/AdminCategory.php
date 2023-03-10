@@ -75,7 +75,7 @@ class AdminCategory extends Component
 
                 $this->dispatchBrowserEvent('show-result',
                     ['type' => 'success',
-                        'message' => 'مجوز مورد نظر با موفقیت حذف شد']);
+                        'message' => 'دسته بندی با موفقیت ایجاد شد']);
 
             } else {
                 // for edit category
@@ -98,7 +98,7 @@ class AdminCategory extends Component
 
                 $this->dispatchBrowserEvent('show-result',
                     ['type' => 'success',
-                        'message' => 'مجوز مورد نظر با موفقیت حذف شد']);
+                        'message' => 'دسته بندی با موفقیت ایجاد شد']);
                 return redirect()->to('/admin/category/index');
             }
 
@@ -132,7 +132,7 @@ class AdminCategory extends Component
                 $category->delete();
                 $this->dispatchBrowserEvent('show-result',
                     ['type' => 'success',
-                        'message' => 'رکورد مورد نظر با موفقیت حذف ش']);
+                        'message' => 'دسته بندی با موفقیت حذف شد']);
                 return $this->redirect->to('/admin/category/list');
             }
         } catch (\Exception $ex) {

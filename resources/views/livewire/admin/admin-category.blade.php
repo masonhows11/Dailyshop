@@ -44,7 +44,7 @@
             <!-- list categories -->
             <div class="col-sm">
                 @if($categories->isEmpty())
-                    <div class="alert d-flex justify-content-center border border-2 border-dark  no-categories">
+                    <div class="alert d-flex justify-content-center border border-1 border-secondary bg-white    no-categories">
                         <p class="text-center my-auto">دسته بندی وجود ندارد.</p>
                     </div>
                 @else
