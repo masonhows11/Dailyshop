@@ -204,7 +204,7 @@
 }
 
 /************ media query */
-@media (max-width: 300px) {
+@media screen and (max-width: 300px) {
     .article-footer-card {
         display: flex;
         flex-direction: column;
@@ -222,17 +222,21 @@
     }
 }
 
-@media (max-width: 576px) {
+@media  (max-width: 576px) {
     .article-footer-card {
         display: flex;
         flex-flow: row;
     }
-
     .article-op {
         display: flex;
         flex-direction: row;
     }
+    .category-section{
+        display: flex;
+        flex-direction: column;
+    }
 }
+
 
 @media (max-width: 1200px) {
     .article-footer-card {

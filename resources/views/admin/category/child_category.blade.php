@@ -1,5 +1,5 @@
 @foreach($child as $category)
-    <div class="card  item-category d-flex justify-content-between ">
+    <div class="card  item-category">
         <div class="card-header">
             {{--start category content --}}
             <div class="item-category-title">

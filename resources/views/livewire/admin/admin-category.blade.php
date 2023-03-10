@@ -3,11 +3,11 @@
         دسته بندی ها
     @endsection
     <div class="container-fluid">
-
-        <div class="row   mt-5 category-section-index">
+        <div class="row mt-5 category-section">
 
             <!-- creat category -->
-            <div class="col-sm category-create">
+            <div class="col-sm-6 category-create">
+
                 <form wire:submit.prevent="storeCategory">
                     <div class="mb-3 mt-3">
                         <label for="title" class="form-label">عنوان دسته بندی به فارسی :</label>
@@ -39,10 +39,10 @@
                         <button type="submit" class="btn btn-success">ذخیره</button>
                     </div>
                 </form>
-            </div>
 
+            </div>
             <!-- list categories -->
-            <div class="col-sm">
+            <div class="col-sm-6 category-list">
                 @if($categories->isEmpty())
                     <div class="alert d-flex justify-content-center border border-1 border-secondary bg-white    no-categories">
                         <p class="text-center my-auto">دسته بندی وجود ندارد.</p>
@@ -86,9 +86,10 @@
                 @endif
             </div>
 
-        </div>
 
+        </div>
     </div>
+
 </div>
 @push('dash_custom_scripts')
     <script type="text/javascript">
