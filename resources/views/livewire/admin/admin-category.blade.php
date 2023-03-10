@@ -30,8 +30,7 @@
 
                     <div class="mb-3 mt-3">
                         <label for="parent" class="form-label">انتخاب دسته بندی والد:</label>
-                        @if($edit_mode != true)
-                            create mode
+                        @if($edit_mode == false)
                             <select class="form-control" wire:model.lazy="parent" id="parent">
                                 <option value="null">فاقد دسته بندی</option>
                                 @foreach($categories as $item)
@@ -39,7 +38,6 @@
                                 @endforeach
                             </select>
                         @else
-                            edit mode
                             <select class="form-control" wire:model.lazy="parent" id="parent">
                               <option value="null">فاقد دسته بندی</option>
                                 @foreach($categories as $item)

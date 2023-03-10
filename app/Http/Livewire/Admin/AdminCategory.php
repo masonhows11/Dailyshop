@@ -79,14 +79,14 @@ class AdminCategory extends Component
 
             } else {
                 // for update category
-               /* if($this->parent === $this->parent)
+               if($this->parent === $this->parent)
                 {
                     $this->dispatchBrowserEvent('show-result',
                             ['type' => 'warning',
                             'message' => 'یک دسته بندی نمی تواند والد خودش باشد']);
                     session()->flash('warning','یک دسته بندی نمی تواند والد خودش باشد');
                     return redirect()->back();
-                }*/
+                }
                 if ($this->parent != null) {
                     Category::where('id', $this->category_id)
                         ->update([
