@@ -52,7 +52,6 @@ class AdminCategory extends Component
     public function storeCategory()
     {
         $this->validate();
-
         try {
             if ($this->edit_mode == false) {
                 // for create category
@@ -79,12 +78,11 @@ class AdminCategory extends Component
 
             } else {
                 // for update category
-               if($this->category_id == $this->parent)
-                {
+                if ($this->category_id == $this->parent) {
                     $this->dispatchBrowserEvent('show-result',
-                            ['type' => 'warning',
+                        ['type' => 'warning',
                             'message' => 'یک دسته بندی نمی تواند والد خودش باشد']);
-                    session()->flash('warning','یک دسته بندی نمی تواند والد خودش باشد');
+                    session()->flash('warning', 'یک دسته بندی نمی تواند والد خودش باشد');
                     return redirect()->back();
                 }
                 if ($this->parent != null) {
@@ -105,7 +103,7 @@ class AdminCategory extends Component
                 $this->parent = '';
 
                 $this->dispatchBrowserEvent('show-result',
-                        ['type' => 'success',
+                    ['type' => 'success',
                         'message' => 'دسته بندی با موفقیت بروز رسانی شد']);
                 return redirect()->back();
 
@@ -114,6 +112,15 @@ class AdminCategory extends Component
         } catch (\Exception $ex) {
             return view('errors_custom.model_store_error');
         }
+    }
+
+    public function create_mode()
+    {
+        $this->edit_mode = false;
+        $this->title_persian = '';
+        $this->title_english = '';
+        $this->parent = '';
+        $this->category_id = '';
     }
 
 
@@ -134,7 +141,7 @@ class AdminCategory extends Component
         try {
             if ($category->parent_id == null) {
                 $this->dispatchBrowserEvent('show-result',
-                       ['type' => 'warning',
+                    ['type' => 'warning',
                         'message' => 'امکان حذف دسته بندی مورد نظر وجود ندارد']);
                 return $this->redirect->to('/admin/category/list');
             } else {
@@ -177,7 +184,7 @@ class AdminCategory extends Component
                 $this->title_english = $category->title_english;
                 $this->category_id = $category->id;
                 $this->parent = null;
-            } else  {
+            } else {
                 $this->title_persian = $category->title_persian;
                 $this->title_english = $category->title_english;
                 $this->category_id = $category->id;

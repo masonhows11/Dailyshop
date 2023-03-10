@@ -50,6 +50,7 @@
 
                     <div class="mb-3 mt-3">
                         <button type="submit" class="btn btn-success">ذخیره</button>
+                        <button type="button" wire:click="create_mode" class="btn btn-primary">دسته بندی جدید</button>
                     </div>
                 </form>
 

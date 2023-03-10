@@ -97,16 +97,17 @@ Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_a
 Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
     Route::get('/category/index', AdminCategory::class)->name('category.list');
 });
+
 // tags
-Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
+/*Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
     Route::get('/tags', AdminTag::class)->name('tags');
-});
+});*/
 
 // articles
-Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
+/*Route::prefix('admin')->name('admin.')->middleware(['web','auth:admin','verify_admin','role:admin|admin'])->group(function () {
     Route::get('/article/index', [AdminArticleController::class, 'index'])->name('article.index');
     Route::get('/article/create', [AdminArticleController::class, 'create'])->name('article.create');
     Route::post('/article/store', [AdminArticleController::class, 'store'])->name('article.store');
     Route::get('/article/edit/{article}', [AdminArticleController::class, 'edit'])->name('article.edit');
     Route::post('/article/update', [AdminArticleController::class, 'update'])->name('article.update');
-});
+});*/
