@@ -79,7 +79,7 @@ class AdminCategory extends Component
 
             } else {
                 // for update category
-               if($this->parent === $this->parent)
+               if($this->category_id == $this->parent)
                 {
                     $this->dispatchBrowserEvent('show-result',
                             ['type' => 'warning',
@@ -107,7 +107,8 @@ class AdminCategory extends Component
                 $this->dispatchBrowserEvent('show-result',
                         ['type' => 'success',
                         'message' => 'دسته بندی با موفقیت بروز رسانی شد']);
-                return redirect()->to('/admin/category/index');
+                return redirect()->back();
+
             }
 
         } catch (\Exception $ex) {
@@ -177,16 +178,11 @@ class AdminCategory extends Component
                 $this->category_id = $category->id;
                 $this->parent = null;
             } else  {
-
                 $this->title_persian = $category->title_persian;
                 $this->title_english = $category->title_english;
                 $this->category_id = $category->id;
                 $this->parent = $category->parent_id;
-
-
             }
-
-
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');
         }
