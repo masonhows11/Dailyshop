@@ -75,7 +75,7 @@ class AdminCategory extends Component
 
                 $this->dispatchBrowserEvent('show-result',
                     ['type' => 'success',
-                        'message' => 'دسته بندی با موفقیت ایجاد شد']);
+                        'message' => 'دسته بندی  جدید با موفقیت ایجاد شد']);
 
             } else {
                 // for update category
@@ -106,7 +106,7 @@ class AdminCategory extends Component
 
                 $this->dispatchBrowserEvent('show-result',
                         ['type' => 'success',
-                        'message' => 'دسته بندی با موفقیت ایجاد شد']);
+                        'message' => 'دسته بندی با موفقیت بروز رسانی شد']);
                 return redirect()->to('/admin/category/index');
             }
 
@@ -172,11 +172,10 @@ class AdminCategory extends Component
                 ->where('id', $id)
                 ->first();
             if ($category->parent_id == null) {
-
                 $this->title_persian = $category->title_persian;
                 $this->title_english = $category->title_english;
                 $this->category_id = $category->id;
-
+                $this->parent = null;
             } else  {
 
                 $this->title_persian = $category->title_persian;
