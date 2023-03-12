@@ -67,7 +67,7 @@
                         @foreach($category_tree as $category)
                             <div id="accordion">
 
-                                <div class="card">
+                                <div class="card mt-4">
 
                                     <div class="card-header item-category bg-secondary">
 

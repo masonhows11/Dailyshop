@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Admin;
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Seeder;
@@ -105,5 +106,76 @@ class DatabaseSeeder extends Seeder
         foreach ($users as $user) {
             User::create($user);
         }
+
+        // category seed
+
+        $category = Category::create([
+            'title_english' => 'cat-digital-product',
+            'title_persian' => 'کالای دیجیتال',
+        ]);
+
+        $category->child()->saveMany([
+            $com = new Category([
+                'title_english' => 'cat-computer',
+                'title_persian' => 'کامپیوتر',
+            ]),
+            $lap = new Category([
+                'title_english' => 'cat-laptop',
+                'title_persian' => 'لپ تاپ',
+            ]),
+            $mob = new Category([
+                'title_english' => 'cat-mobile',
+                'title_persian' => 'موبایل',
+            ])
+
+        ]);
+
+        $category2 = Category::create([
+            'title_english' => 'cat-vehicle-tools',
+            'title_persian' => 'خودرو و ابزار',
+        ]);
+
+        $category2->child()->saveMany([
+            new Category([
+                'title_english' => 'cat-cars',
+                'title_persian' => 'خودرو ها',
+            ]),
+            new Category([
+                'title_english' => 'cat-motorbikes',
+                'title_persian' => 'موتور سیکلت',
+            ])
+        ]);
+
+        $category3 = Category::create([
+            'title_english' => 'cat-Fashion-clothing',
+            'title_persian' => 'مد و پوشاک',
+        ]);
+
+        $category3->child()->saveMany([
+            new Category([
+                'title_english' => 'cat-men-clothing',
+                'title_persian' => 'پوشاک مردانه',
+            ]),
+            new Category([
+                'title_english' => 'cat-women-clothing',
+                'title_persian' => 'پوشاک زنانه',
+            ])
+        ]);
+
+        $category4 = Category::create([
+            'title_english' => 'toys-child-health',
+            'title_persian' => 'اسباب بازی و کودک',
+        ]);
+
+        $category4->child()->saveMany([
+            new Category([
+                'title_english' => 'health-bathroom-kids',
+                'title_persian' => 'بهداشت و حمام کودک',
+            ]),
+            new Category([
+                'title_english' => 'kids-clothing',
+                'title_persian' => 'کفش و لباس کودک',
+            ])
+        ]);
     }
 }
