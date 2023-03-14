@@ -14,7 +14,7 @@ class Category extends Model
     use HasFactory,HasRecursiveRelationships,HasPersianSlug;
 
     protected $table = 'categories';
-    protected $fillable = ['title_english','title_persian','slug','parent_id'];
+    protected $fillable = ['title_english','title_persian','slug','parent_id','image_path','has_spec'];
 
     public function getSlugOptions()
     {

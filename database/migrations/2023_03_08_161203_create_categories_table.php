@@ -22,6 +22,8 @@ return new class extends Migration
             $table->boolean('is_active')->default(true);
             $table->unsignedBigInteger('display_order')->nullable();
             $table->unsignedBigInteger('parent_id')->nullable();
+            $table->string('image_path')->nullable();
+            $table->boolean('has_spec')->nullable();
             $table->foreign('parent_id')->references('id')
                 ->on('categories')->onDelete('cascade');
             $table->timestamps();
